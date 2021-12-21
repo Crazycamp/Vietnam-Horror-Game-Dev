@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Sàn.jpg-f633af97aa4fef467166ce8b0fbe6123.stex"
+path="res://.import/Sàn.jpg-46289623cf401eb69126943b04bfe576.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Classroom/tile/Sàn.jpg"
-dest_files=[ "res://.import/Sàn.jpg-f633af97aa4fef467166ce8b0fbe6123.stex" ]
+source_file="res://Assets/Classroom/tile/Sàn.jpg"
+dest_files=[ "res://.import/Sàn.jpg-46289623cf401eb69126943b04bfe576.stex" ]
 
 [params]
 

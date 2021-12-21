@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Tường.jpg-24f82c4e06d99fb6fe1332f80571cf38.stex"
+path="res://.import/Trần.jpg-d45e06d28ed43b60f3f9e235d99cc497.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Classroom/tile/Tường.jpg"
-dest_files=[ "res://.import/Tường.jpg-24f82c4e06d99fb6fe1332f80571cf38.stex" ]
+source_file="res://Assets/Classroom/tile/Trần.jpg"
+dest_files=[ "res://.import/Trần.jpg-d45e06d28ed43b60f3f9e235d99cc497.stex" ]
 
 [params]
 

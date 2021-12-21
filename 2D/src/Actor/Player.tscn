@@ -14,25 +14,25 @@ extents = Vector2( 63, 159.5 )
 extents = Vector2( 64, 160 )
 
 [node name="Player" type="KinematicBody2D"]
-position = Vector2( -3, -96 )
+position = Vector2( -128, 408 )
 collision_mask = 8
 script = ExtResource( 2 )
 speed = Vector2( 799, 1400 )
 
 [node name="player" type="Sprite" parent="."]
-position = Vector2( 67, -64 )
+position = Vector2( 0, 16.5 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 68, -64.5 )
+position = Vector2( 1, 16 )
 shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 29, -31 )
+position = Vector2( 3, -136 )
 current = true
-zoom = Vector2( 1.5, 1.5 )
-limit_left = -500
-limit_top = 0
+zoom = Vector2( 3, 3 )
+limit_left = -1134
+limit_top = -761
 limit_smoothed = true
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
@@ -42,17 +42,17 @@ drag_margin_left = 0.0
 drag_margin_right = 0.0
 
 [node name="EnemyDetector" type="Area2D" parent="."]
-position = Vector2( 32, 9 )
+position = Vector2( -35, 89.5 )
 collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyDetector"]
 modulate = Color( 0, 0.0627451, 1, 1 )
-position = Vector2( 35, -73 )
+position = Vector2( 35, -73.5 )
 shape = SubResource( 2 )
 
 [node name="Flashlight" type="Sprite" parent="."]
-position = Vector2( 43, -24 )
+position = Vector2( 1, 16.5 )
 rotation = 6.28319
 scale = Vector2( 0.101222, 0.111452 )
 texture = ExtResource( 3 )
@@ -60,10 +60,11 @@ offset = Vector2( 600, 0 )
 script = ExtResource( 6 )
 
 [node name="Light2D" type="Light2D" parent="Flashlight"]
-position = Vector2( 8843.67, -19.5857 )
+position = Vector2( 8841.95, -44.8979 )
 scale = Vector2( 43.1126, 8.42779 )
 texture = ExtResource( 5 )
 energy = 2.0
+shadow_enabled = true
 
 [node name="Sprite" type="Sprite" parent="Flashlight/Light2D"]
 visible = false
