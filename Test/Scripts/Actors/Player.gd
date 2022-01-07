@@ -1,9 +1,12 @@
-extends Spatial
+extends Actor
 
 export var stomp_impluse = 1000.0
 
 onready var pointer:= $Pointer
 onready var ray:= $Pointer/RayCast2D
+
+
+	
 
 func _on_EnemyDetector_area_entered(area: Area2D) -> void:
 	_velocity = calculate_stomp_velocity(_velocity, stomp_impluse)
