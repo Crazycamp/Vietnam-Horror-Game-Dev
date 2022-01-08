@@ -1,12 +1,13 @@
-extends KinematicBody2D
+extends KinematicBody
 class_name Actor
 
-const FLOOR_NORMAL: = Vector2.UP
+const FLOOR_NORMAL: = Vector3.UP
 
-export var speed: = Vector2(300.0, 1000.0)
-export var gravity: = 4000.0
+export var speed: = 7.0
+export var gravity: = 30.0
+export var jump_force: = 12.0
 
-var _velocity: = Vector2.ZERO
+var _velocity_y: = 0.0
 
 
 	
