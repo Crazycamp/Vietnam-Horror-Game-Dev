@@ -18,9 +18,6 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor() or is_on_ceiling():
 		_velocity_y = 0.0
 
-func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("jump"):
-		_velocity_y = jump_force
-	
+
 
 

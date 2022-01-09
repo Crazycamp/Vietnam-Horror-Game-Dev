@@ -32,8 +32,3 @@ animation = "RUn"
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 shape = SubResource( 2 )
-
-[node name="Camera" type="Camera" parent="."]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.0264256, -0.055986, 2.46793 )
-current = true
-size = 6.85232

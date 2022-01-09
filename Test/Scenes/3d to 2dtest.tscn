@@ -23,8 +23,12 @@ shape = SubResource( 1 )
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -1.2982, 1.47925, -0.0151517 )
 jump_force = 10.0
 
-[node name="Camera" parent="Player" index="2"]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.11248, 0.60919, 2.67488 )
+[node name="Camera" type="Camera" parent="Player"]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.560173, -0.153324, 3.66265 )
+current = true
+fov = 53.4
+size = 6.85232
+near = 0.01
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.658298, 1.28101 )
