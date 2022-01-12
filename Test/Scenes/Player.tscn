@@ -23,6 +23,8 @@ extents = Vector3( 0.265083, 0.420577, 0.0665966 )
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
 collision_mask = 2
 script = ExtResource( 2 )
+speed = 5.0
+gravity = 55.0
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0 )
@@ -32,3 +34,10 @@ animation = "RUn"
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 shape = SubResource( 2 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.560173, 0.359833, 3.66265 )
+current = true
+fov = 88.568
+size = 6.85232
+near = 0.01
