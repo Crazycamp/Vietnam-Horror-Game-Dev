@@ -25,9 +25,16 @@ shape = SubResource( 1 )
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -1.2982, 1.47925, -0.0151517 )
 jump_force = 10.0
 
+[node name="Test Cam" type="Camera" parent="Player"]
+transform = Transform( 0.0664434, 0.0657398, -0.491186, -0.0197144, 0.495539, 0.0636556, 0.495173, 0.0109079, 0.0684426, -1.67802, 0.331747, 0.19363 )
+visible = false
+current = true
+fov = 61.875
+size = 6.85232
+near = 0.01
+
 [node name="Camera" type="Camera" parent="Player"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.560173, 0.359833, 3.66265 )
-visible = false
 current = true
 fov = 61.875
 size = 6.85232

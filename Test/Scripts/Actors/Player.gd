@@ -1,9 +1,10 @@
 extends Actor
 
+
 func _physics_process(delta: float) -> void:
 	var direction: = Vector2(
 		Input.get_action_strength("move_right") - Input.get_action_strength("move_left"),
-		- 1.0 if Input.is_action_just_pressed("jump") and is_on_floor() else 0.0 
+		- 1.0 if Input.is_action_just_pressed("jump") and is_on_floor() and is_on_ceiling() else 0.0 
 		).normalized()
 	
 	if not is_on_floor():
