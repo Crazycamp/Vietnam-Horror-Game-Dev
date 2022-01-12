@@ -27,6 +27,7 @@ jump_force = 10.0
 
 [node name="Camera" type="Camera" parent="Player"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.560173, 0.359833, 3.66265 )
+visible = false
 current = true
 fov = 61.875
 size = 6.85232
