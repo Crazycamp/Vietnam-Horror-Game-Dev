@@ -10,6 +10,7 @@ extents = Vector3( 18.1333, 0.621693, 0.238575 )
 
 [node name="StaticBody" type="StaticBody" parent="."]
 collision_layer = 2
+collision_mask = 3
 
 [node name="Sprite3D" type="Sprite3D" parent="StaticBody"]
 texture = ExtResource( 2 )
@@ -19,3 +20,4 @@ shape = SubResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.5926, 0 )
+collision_layer = 3

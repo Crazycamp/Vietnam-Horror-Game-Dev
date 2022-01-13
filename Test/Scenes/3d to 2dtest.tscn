@@ -1,17 +1,14 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/floor 2.png" type="Texture" id=1]
 [ext_resource path="res://assets/Trees/slice1@3x.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/Trees/slice2@3x.png" type="Texture" id=4]
-[ext_resource path="res://assets/Interactable objects/floor 2.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Box.tscn" type="PackedScene" id=5]
 
 [sub_resource type="BoxShape" id=1]
 margin = 0.94
 extents = Vector3( 18.27, 0.707254, 0.834347 )
-
-[sub_resource type="BoxShape" id=2]
-extents = Vector3( 0.851337, 1, 1 )
 
 [sub_resource type="ProceduralSky" id=3]
 sky_top_color = Color( 0.894118, 0.894118, 0.894118, 1 )
@@ -59,13 +56,14 @@ near = 0.01
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 10, 0, 0, 0, 1, 0, -5.80195, 1.28101 )
-modulate = Color( 0.368627, 0.239216, 0.239216, 1 )
+modulate = Color( 0, 0, 0, 1 )
 texture = ExtResource( 1 )
 
 [node name="Trees Front" type="Spatial" parent="."]
 
 [node name="Sprite3D2" type="Sprite3D" parent="Trees Front"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.27187, 2.4177, 4.44069 )
+modulate = Color( 0, 0, 0, 1 )
 texture = ExtResource( 4 )
 
 [node name="Sprite3D2" type="Sprite3D" parent="Trees Front/Sprite3D2"]
@@ -78,23 +76,12 @@ texture = ExtResource( 2 )
 
 [node name="Sprite3D" type="Sprite3D" parent="Trees Front"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.56922, 1.97538, 4.36368 )
+modulate = Color( 0, 0, 0, 1 )
 texture = ExtResource( 2 )
-
-[node name="RigidBody" type="RigidBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.574114, 0.07458, 0 )
-
-[node name="Sprite3D" type="Sprite3D" parent="RigidBody"]
-transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.19629, 0.621547, 0 )
-layers = 2
-texture = ExtResource( 5 )
-
-[node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.296388, 0.684543, 0 )
-shape = SubResource( 2 )
 
 [node name="Sprite3D2" type="Sprite3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 10, 0, 0, 0, 1, 0, -0.703435, -7.84749 )
-modulate = Color( 0.368627, 0.239216, 0.239216, 1 )
+modulate = Color( 0.258824, 0.254902, 0.254902, 1 )
 texture = ExtResource( 1 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -105,5 +92,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, 6 )
 layers = 3
 shadow_enabled = true
 spot_range = 5.55945
+
+[node name="Spatial" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.78941, 1.5942, -0.00941736 )
 
 [editable path="Player"]
