@@ -9,6 +9,8 @@ export var jump_force: = 12.0
 
 var _velocity_y: = 0.0
 
+var facing_right = true
+
 
 	
 		

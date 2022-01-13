@@ -26,8 +26,11 @@ script = ExtResource( 2 )
 speed = 5.0
 gravity = 55.0
 
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
-transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0 )
+[node name="Texture" type="Spatial" parent="."]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0 )
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Texture"]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0 )
 use_in_baked_light = true
 frames = SubResource( 1 )
 animation = "RUn"
