@@ -24,7 +24,7 @@ fog_enabled = true
 [node name="Spatial" type="Spatial"]
 
 [node name="Wall2" type="StaticBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.3857, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4647, 0, 0.602689 )
 
 [node name="Sprite3D" type="Sprite3D" parent="Wall2"]
 transform = Transform( -4.37114e-08, -3, 0, 1, -1.31134e-07, 0, 0, 0, 1, 1.77015, 0, 0 )
@@ -38,6 +38,7 @@ transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0.69641
 
 [node name="Sprite3D" type="Sprite3D" parent="Wall3"]
 transform = Transform( -4.37114e-08, -3, 0, 1, -1.31134e-07, 0, 0, 0, 1, 0, 0, 0 )
+shaded = true
 texture = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Wall3"]
@@ -68,7 +69,22 @@ texture = ExtResource( 2 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.6865, 0 )
 shape = SubResource( 1 )
 
+[node name="Floor2" type="StaticBody" parent="."]
+transform = Transform( 5, 0, 0, 0, 10, 0, 0, 0, 1, 0, 4.78231, -5.34236 )
+collision_layer = 2
+collision_mask = 3
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor2"]
+shape = SubResource( 1 )
+
+[node name="Sprite3D" type="Sprite3D" parent="Floor2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.72572 )
+modulate = Color( 0.678431, 0.678431, 0.678431, 1 )
+shaded = true
+texture = ExtResource( 3 )
+
 [node name="Floor" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.157494 )
 collision_layer = 2
 collision_mask = 3
 
@@ -79,25 +95,11 @@ shape = SubResource( 1 )
 shaded = true
 texture = ExtResource( 3 )
 
-[node name="Floor" type="StaticBody" parent="Floor"]
-transform = Transform( 5, 0, 0, 0, 10, 0, 0, 0, 1, 0, 4.78231, -1.80041 )
-collision_layer = 2
-collision_mask = 3
-
-[node name="CollisionShape" type="CollisionShape" parent="Floor/Floor"]
-shape = SubResource( 1 )
-
-[node name="Sprite3D" type="Sprite3D" parent="Floor/Floor"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.72572 )
-modulate = Color( 0.678431, 0.678431, 0.678431, 1 )
-shaded = true
-texture = ExtResource( 3 )
-
 [node name="Box" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.96835, 1.09621, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.52979, 0 )
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.52979, -0.0620238 )
 
 [node name="Camera" parent="Player" index="2"]
 fov = 42.1875
