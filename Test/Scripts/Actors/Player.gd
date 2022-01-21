@@ -33,3 +33,6 @@ func _unhandled_input(event: InputEvent) -> void:
 func flip():
 	$Texture.rotation_degrees.y *= -1
 	facing_right = !facing_right
+
+func teleport_to(target_pos):
+	pass
