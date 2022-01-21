@@ -5,20 +5,20 @@
 [ext_resource path="res://assets/floor 2.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/Box.tscn" type="PackedScene" id=4]
 
-[sub_resource type="BoxShape" id=2]
+[sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.560237, 18.2844, 1 )
 
-[sub_resource type="BoxShape" id=1]
+[sub_resource type="BoxShape" id=2]
 extents = Vector3( 18.0397, 0.653816, 1 )
 
-[sub_resource type="ProceduralSky" id=4]
+[sub_resource type="ProceduralSky" id=3]
 sky_top_color = Color( 0.968627, 0.92549, 0.815686, 1 )
 sky_horizon_color = Color( 1, 1, 1, 1 )
 sky_energy = 0.0
 
-[sub_resource type="Environment" id=5]
+[sub_resource type="Environment" id=4]
 background_mode = 2
-background_sky = SubResource( 4 )
+background_sky = SubResource( 3 )
 fog_enabled = true
 
 [node name="Spatial" type="Spatial"]
@@ -31,7 +31,7 @@ transform = Transform( -4.37114e-08, -3, 0, 1, -1.31134e-07, 0, 0, 0, 1, 1.77015
 texture = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Wall2"]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Wall3" type="StaticBody" parent="."]
 transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0.696411, -1.47159, 0.548616 )
@@ -43,7 +43,7 @@ texture = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Wall3"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25725, 0, 0 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Wall" type="StaticBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.1004, 1.90735e-06, 0.0277634 )
@@ -54,7 +54,7 @@ texture = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Wall"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25725, 0, 0 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Roof" type="StaticBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.5598, 0 )
@@ -67,7 +67,7 @@ texture = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Roof"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.6865, 0 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="Floor2" type="StaticBody" parent="."]
 transform = Transform( 5, 0, 0, 0, 10, 0, 0, 0, 1, 0, 4.78231, -5.34236 )
@@ -75,13 +75,13 @@ collision_layer = 2
 collision_mask = 3
 
 [node name="CollisionShape" type="CollisionShape" parent="Floor2"]
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="Sprite3D" type="Sprite3D" parent="Floor2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.72572 )
 modulate = Color( 0.678431, 0.678431, 0.678431, 1 )
 shaded = true
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 
 [node name="Floor" type="StaticBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.157494 )
@@ -89,7 +89,7 @@ collision_layer = 2
 collision_mask = 3
 
 [node name="CollisionShape" type="CollisionShape" parent="Floor"]
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="Sprite3D" type="Sprite3D" parent="Floor"]
 shaded = true
@@ -105,6 +105,6 @@ transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.52979, -0.0620238 )
 fov = 42.1875
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource( 5 )
+environment = SubResource( 4 )
 
 [editable path="Player"]
