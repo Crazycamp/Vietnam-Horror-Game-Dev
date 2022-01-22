@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="StreamTexture" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0901961, 0.0823529, 0.0823529, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" type="Button" parent="."]
+margin_left = 49.0
+margin_top = 439.0
+margin_right = 209.0
+margin_bottom = 480.0
+text = "Play"
+flat = true
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="."]
+margin_left = 45.0
+margin_top = 478.0
+margin_right = 244.0
+margin_bottom = 528.0
+text = "Quit Game"
+icon = SubResource( 1 )
+flat = true
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
