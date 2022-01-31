@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Union.png-8c76b9aec5fc5a918fa77c7a76cc6e83.stex"
+path="res://.import/Union.png-1037ca57caeb0fb98420c2c426ece198.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Minigame/Union.png"
-dest_files=[ "res://.import/Union.png-8c76b9aec5fc5a918fa77c7a76cc6e83.stex" ]
+source_file="res://Scenes/Minigame/Mopping/Union.png"
+dest_files=[ "res://.import/Union.png-1037ca57caeb0fb98420c2c426ece198.stex" ]
 
 [params]
 

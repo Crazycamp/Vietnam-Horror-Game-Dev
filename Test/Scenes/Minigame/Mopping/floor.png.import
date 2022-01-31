@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/floor.png-999f19b2f437fafffef8ea86d4b7749a.stex"
+path="res://.import/floor.png-932f53ae44ddb43c1d2180014be713ae.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Minigame/floor.png"
-dest_files=[ "res://.import/floor.png-999f19b2f437fafffef8ea86d4b7749a.stex" ]
+source_file="res://Scenes/Minigame/Mopping/floor.png"
+dest_files=[ "res://.import/floor.png-932f53ae44ddb43c1d2180014be713ae.stex" ]
 
 [params]
 
