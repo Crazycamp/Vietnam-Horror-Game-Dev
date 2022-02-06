@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assets/Enviroments/floor 2.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/objects/Box.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Levels/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://School/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/objects/Classroom Lights.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/Enviroments/floor.png" type="Texture" id=5]
 
