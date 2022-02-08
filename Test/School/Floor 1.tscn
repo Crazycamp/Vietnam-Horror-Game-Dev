@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/sky day.tres" type="Environment" id=1]
+[ext_resource path="res://School/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/objects/square.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/objects/square.png" type="Texture" id=4]
+[ext_resource path="res://School/windows.png" type="Texture" id=5]
+
+[node name="Level" type="Spatial"]
+
+[node name="roof" parent="." instance=ExtResource( 3 )]
+transform = Transform( 7952.72, 0, 0, 0, 1.02866, 0, 0, 0, 10.2283, -0.0444164, 4.83389, 0 )
+
+[node name="Ground" parent="." instance=ExtResource( 3 )]
+transform = Transform( 89.178, 0, 0, 0, 1.01423, 0, 0, 0, 3.19817, 0, 0, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -1.30939, 1.35683, 0.011626 )
+gravity = 40.0
+jump_force = 10.0
+
+[node name="Trees Front" type="Spatial" parent="."]
+transform = Transform( 1.00487, 0, 0, 0, 1.00487, 0, 0, 0, 1.00487, 0, 0, 0 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource( 1 )
+
+[node name="SpotLight2" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13.7009 )
+shadow_enabled = true
+spot_range = 3.9342
+spot_angle = 59.5364
+
+[node name="Classroom walls" type="Sprite3D" parent="."]
+transform = Transform( 11.7505, 0, 0, 0, 1.28811, 0, 0, 0, 1, 0, 0.761897, -3.57426 )
+modulate = Color( 1, 0.74902, 0, 1 )
+shaded = true
+texture = ExtResource( 4 )
+
+[node name="Enviroment" type="Node" parent="."]
+
+[node name="windows" type="Sprite3D" parent="Enviroment"]
+transform = Transform( 0.24724, 0, 0, 0, 0.24724, 0, 0, 0, 1, 0, 2.22034, -1.43069 )
+modulate = Color( 0.529412, 0.529412, 0.529412, 1 )
+shaded = true
+texture = ExtResource( 5 )
+
+[node name="windows2" type="Sprite3D" parent="Enviroment"]
+transform = Transform( 0.24724, 0, 0, 0, 0.24724, 0, 0, 0, 1, 6.53561, 2.22034, -1.42386 )
+modulate = Color( 0.529412, 0.529412, 0.529412, 1 )
+shaded = true
+texture = ExtResource( 5 )
+
+[node name="windows3" type="Sprite3D" parent="Enviroment"]
+transform = Transform( 0.24724, 0, 0, 0, 0.24724, 0, 0, 0, 1, 13.0497, 2.22034, -1.43069 )
+modulate = Color( 0.529412, 0.529412, 0.529412, 1 )
+shaded = true
+texture = ExtResource( 5 )
+
+[editable path="Player"]
