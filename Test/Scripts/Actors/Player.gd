@@ -16,7 +16,7 @@ func _physics_process(delta: float):
 		0.0)
 	move_and_slide(_velocity, FLOOR_NORMAL)
 	
-	
+		
 	if is_on_floor() or is_on_ceiling():
 		_velocity_y = 0.0
 		

@@ -21,6 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Tan Trường"
+run/main_scene="res://Scenes/3d to 2dtest.tscn"
 config/icon="res://icon.png"
 
 [display]
