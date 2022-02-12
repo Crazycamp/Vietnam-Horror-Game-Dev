@@ -7,7 +7,7 @@ func _ready() -> void:
 
 func _on_Area_body_entered(body: Node) -> void:
 	if body is KinematicBody && body.is_in_group("player"):
-		pass
+		SceneSwitcher.changeScene(path)
 
 
 func _on_Area_body_exited(body: Node) -> void:
