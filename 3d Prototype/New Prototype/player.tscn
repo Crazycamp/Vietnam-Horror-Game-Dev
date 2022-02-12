@@ -25,7 +25,9 @@ func _physics_process(delta) -> void:
 [sub_resource type="CapsuleShape" id=2]
 height = 3.07645
 
-[node name="Học sinh" type="KinematicBody"]
+[node name="Học sinh" type="KinematicBody" groups=[
+"player",
+]]
 script = SubResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
