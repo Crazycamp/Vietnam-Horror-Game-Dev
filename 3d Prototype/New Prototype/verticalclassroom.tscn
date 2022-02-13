@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://New Prototype/Classroom Interior.png" type="Texture" id=1]
 [ext_resource path="res://New Prototype/player.tscn" type="PackedScene" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://New Prototype/interiors/Ghế.tscn" type="PackedScene" id=7]
 [ext_resource path="res://New Prototype/interiors/Bảng.tscn" type="PackedScene" id=8]
 [ext_resource path="res://assets/material/Wall.tres" type="Material" id=9]
+[ext_resource path="res://Script/Trigger/SceneTrigger.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Script/Trigger/SceneTriggerHolder.tscn" type="PackedScene" id=11]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 20, 1, 10 )
@@ -29,6 +31,8 @@ bind/0/pose = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="Spatial" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.1999, 3.51935, -22.0274 )
+speed = null
+gravity = null
 
 [node name="Floor" type="StaticBody" parent="."]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.156, 0, -4.9144 )
@@ -334,5 +338,17 @@ shadow_enabled = true
 shadow_reverse_cull_face = true
 spot_range = 21.5273
 spot_angle = 40.7813
+
+[node name="SceneTriggerHolder" parent="." instance=ExtResource( 11 )]
+transform = Transform( -1.79451e-07, 0, 1, 0, 5.1528, 0, -4.10536, 0, -4.37114e-08, -22.5382, 5.4318, 16.1148 )
+
+[node name="SceneTrigger" parent="SceneTriggerHolder" instance=ExtResource( 10 )]
+path = "res://New Prototype/horizontalBathroom.tscn"
+
+[node name="SceneTriggerHolder2" parent="." instance=ExtResource( 11 )]
+transform = Transform( -1.79451e-07, 0, 1, 0, 5.1528, 0, -4.10536, 0, -4.37114e-08, -22.3699, 5.4318, -25.9529 )
+
+[node name="SceneTrigger" parent="SceneTriggerHolder2" instance=ExtResource( 10 )]
+path = "res://New Prototype/horizontalBathroom.tscn"
 
 [editable path="Spatial"]
