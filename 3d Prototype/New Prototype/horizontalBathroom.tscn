@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://New Prototype/interiors/Thùng rác.tscn" type="PackedScene" id=1]
 [ext_resource path="res://New Prototype/player.tscn" type="PackedScene" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://assets/material/floor.tres" type="Material" id=5]
 [ext_resource path="res://assets/material/Wall.tres" type="Material" id=6]
 [ext_resource path="res://New Prototype/interiors/Doors.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Script/Trigger/SceneTrigger.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Script/Trigger/SceneTriggerHolder.tscn" type="PackedScene" id=9]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -189,3 +191,9 @@ shape = SubResource( 2 )
 
 [node name="Cửa lớp học" parent="." instance=ExtResource( 7 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.66845, 4.78135, 14.1721 )
+
+[node name="SceneTriggerHolder" parent="." instance=ExtResource( 9 )]
+
+[node name="SceneTrigger" parent="SceneTriggerHolder" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.35722, 1.24767, 0 )
+path = "res://New Prototype/horizontalclassroom.tscn"
