@@ -1,8 +1,5 @@
 extends Actor
 
-func _ready():
-	$SceneSwitcher.connect("sceneChanged", self, "playerSettup")
-
 func playerSetup (pos : Vector3):
 	global_transform.origin = pos
 	
