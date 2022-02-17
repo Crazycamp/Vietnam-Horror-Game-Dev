@@ -21,6 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="3d Prototype"
+run/main_scene="res://New Prototype/Levels/School.tscn"
 config/icon="res://icon.png"
 
 [input]

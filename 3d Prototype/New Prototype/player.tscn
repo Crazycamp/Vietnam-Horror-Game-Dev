@@ -4,7 +4,7 @@
 [ext_resource path="res://Script/player.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape" id=2]
-height = 3.07645
+height = 3.53529
 
 [node name="Học sinh" type="KinematicBody" groups=["player"]]
 script = ExtResource( 2 )
