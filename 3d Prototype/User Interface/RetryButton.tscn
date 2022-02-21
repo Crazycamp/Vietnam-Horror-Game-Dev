@@ -8,7 +8,6 @@ anchor_bottom = 1.0
 margin_left = -1.0
 margin_right = -625.0
 margin_bottom = -520.0
-size_flags_vertical = 3
 text = "Retry"
 script = ExtResource( 1 )
 __meta__ = {
