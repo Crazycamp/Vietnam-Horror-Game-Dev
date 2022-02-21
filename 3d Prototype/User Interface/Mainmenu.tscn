@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://User Interface/MainMenu.gd" type="Script" id=1]
+[ext_resource path="res://User Interface/ChangeSceneButton.tscn" type="PackedScene" id=1]
 [ext_resource path="res://User Interface/title_screen/gamelogo.png" type="Texture" id=2]
+[ext_resource path="res://User Interface/QuitButton.tscn" type="PackedScene" id=3]
 
-[node name="Title" type="Control"]
+[node name="Mainmenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -1.0
@@ -41,13 +42,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Start" type="Button" parent="VBoxContainer"]
-margin_top = 7.0
+[node name="StartButton" parent="VBoxContainer" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_right = 141.0
 margin_bottom = 27.0
-text = "Start"
 align = 0
-script = ExtResource( 1 )
+next_scene_path = "res://New Prototype/Levels/School.tscn"
 
 [node name="Settings" type="Button" parent="VBoxContainer"]
 margin_top = 31.0
@@ -56,11 +57,10 @@ margin_bottom = 51.0
 text = "Settings"
 align = 0
 
-[node name="Leave" type="Button" parent="VBoxContainer"]
+[node name="QuitButton" parent="VBoxContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_top = 55.0
 margin_right = 141.0
-margin_bottom = 75.0
-text = "Quit "
+margin_bottom = 83.0
 align = 0
-
-[connection signal="pressed" from="VBoxContainer/Start" to="VBoxContainer/Start" method="_on_Start_pressed"]
