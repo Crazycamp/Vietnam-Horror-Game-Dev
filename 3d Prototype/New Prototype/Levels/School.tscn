@@ -1,9 +1,8 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://New Prototype/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/horror enviroment.tres" type="Environment" id=2]
 [ext_resource path="res://assets/material/floor.tres" type="Material" id=3]
-[ext_resource path="res://assets/Schoolmaterial.tres" type="Material" id=4]
 [ext_resource path="res://New Prototype/interiors/Stairway/block1.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/Bike.tscn" type="PackedScene" id=6]
 [ext_resource path="res://User Interface/PauseMenu.tscn" type="PackedScene" id=7]
@@ -52,39 +51,6 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 )
 }
 
-[sub_resource type="BoxShape" id=8]
-
-[sub_resource type="CubeMesh" id=9]
-
-[sub_resource type="BoxShape" id=10]
-
-[sub_resource type="SpatialMaterial" id=11]
-albedo_color = Color( 0.835294, 0.294118, 0.847059, 1 )
-
-[sub_resource type="ConcavePolygonShape" id=12]
-data = PoolVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
-
-[sub_resource type="SpatialMaterial" id=13]
-albedo_color = Color( 0.627451, 0.270588, 0.8, 1 )
-
-[sub_resource type="ConcavePolygonShape" id=14]
-data = PoolVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
-
-[sub_resource type="SpatialMaterial" id=15]
-albedo_color = Color( 0.780392, 0.611765, 0.14902, 1 )
-
-[sub_resource type="ConcavePolygonShape" id=16]
-data = PoolVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
-
-[sub_resource type="ConcavePolygonShape" id=17]
-data = PoolVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
-
-[sub_resource type="SpatialMaterial" id=18]
-albedo_color = Color( 0.996078, 0.647059, 0.901961, 1 )
-
-[sub_resource type="ConcavePolygonShape" id=19]
-data = PoolVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
-
 [node name="Spatial" type="Spatial"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -94,7 +60,7 @@ layer = 100
 
 [node name="Học sinh" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -242.024, 3.68304, 62.728 )
-speed = 10.0
+speed = 13.0
 
 [node name="Camera" parent="Học sinh" index="2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.81768 )
@@ -114,7 +80,7 @@ material/0 = null
 environment = ExtResource( 2 )
 
 [node name="Fence" type="StaticBody" parent="."]
-transform = Transform( -0.0465095, -1.90395, 1.25856e-07, 0.970354, -0.0301082, 1.14596e-07, -1.57222e-06, -2.51104e-06, 19.865, -224.524, 4.68903, 298.414 )
+transform = Transform( -0.0465095, -1.90395, 1.25856e-07, 0.970354, -0.0301082, 1.14596e-07, -1.82938e-06, -2.92175e-06, 23.1142, -224.524, 4.68903, 308.06 )
 collision_mask = 2
 
 [node name="CollisionShape" type="CollisionShape" parent="Fence"]
@@ -126,7 +92,7 @@ skin = SubResource( 5 )
 material/0 = ExtResource( 3 )
 
 [node name="Fence2" type="StaticBody" parent="."]
-transform = Transform( -0.0465099, -1.90397, 1.25857e-07, 0.970362, -0.0301085, 1.14597e-07, -1.78645e-06, -2.85321e-06, 22.5719, 246.313, 4.68903, 157.451 )
+transform = Transform( -0.0465099, -1.90397, 1.25857e-07, 0.970362, -0.0301085, 1.14597e-07, -1.91733e-06, -3.06224e-06, 24.2255, 246.313, 4.68903, 166.743 )
 collision_mask = 2
 
 [node name="CollisionShape" type="CollisionShape" parent="Fence2"]
@@ -150,10 +116,11 @@ skin = SubResource( 5 )
 material/0 = ExtResource( 3 )
 
 [node name="Fence4" type="StaticBody" parent="."]
-transform = Transform( -0.00744655, -0.304882, -14.5364, 0.970354, -0.0301082, 1.14596e-07, -0.0277954, -1.13785, 3.89503, -114.73, 4.68903, 506.849 )
+transform = Transform( -0.00871771, -0.356927, -17.0178, 0.970354, -0.0301082, 1.14596e-07, -0.0325402, -1.33209, 4.55993, -71.846, 4.08948, 484.036 )
 collision_mask = 2
 
 [node name="CollisionShape" type="CollisionShape" parent="Fence4"]
+transform = Transform( 1, 1.86265e-09, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 shape = SubResource( 3 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Fence4"]
@@ -162,7 +129,7 @@ skin = SubResource( 5 )
 material/0 = ExtResource( 3 )
 
 [node name="Fence6" type="StaticBody" parent="."]
-transform = Transform( -0.00258686, -0.105913, -5.04981, 0.970354, -0.0301082, 1.14596e-07, -0.00965588, -0.395278, 1.3531, 202.375, 4.68903, 418.832 )
+transform = Transform( -0.0029103, -0.119156, -5.6812, 0.970354, -0.0301082, 1.14596e-07, -0.0108632, -0.444701, 1.52228, 184.618, 5.08231, 419.358 )
 collision_mask = 2
 
 [node name="CollisionShape" type="CollisionShape" parent="Fence6"]
@@ -187,7 +154,6 @@ material/0 = ExtResource( 3 )
 
 [node name="School" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27.2225, 0, 0 )
-visible = false
 
 [node name="Floor" type="StaticBody" parent="School"]
 transform = Transform( 166.633, 0, 0, 0, 1, 0, 0, 0, 7.70385, 0, 0, 0 )
@@ -336,79 +302,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 101.421, 0.709814, -10.9617 )
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( -0.247773, -0.600848, 0.759994, 0.617036, -0.702644, -0.354341, 0.74691, 0.381147, 0.544841, 0, 190.891, -157.569 )
 light_color = Color( 0.313726, 0.313726, 0.313726, 1 )
-
-[node name="Dãy Học B" type="StaticBody" parent="."]
-transform = Transform( -8.74228e-06, 0, 40, 0, 80, 0, -180.841, 0, -1.58096e-06, 183.047, 76.8603, 139.99 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Dãy Học B"]
-shape = SubResource( 8 )
-
-[node name="Dãy Học B" type="MeshInstance" parent="Dãy Học B/CollisionShape"]
-transform = Transform( 1, 0, 8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-mesh = SubResource( 9 )
-skeleton = NodePath("../../..")
-material/0 = ExtResource( 4 )
-
-[node name="Dãy Học A" type="StaticBody" parent="."]
-transform = Transform( -0.247773, -0.600848, 0.759993, 0.617036, -0.702644, -0.354342, 0.74691, 0.381147, 0.544841, 0, 190.891, -157.569 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Dãy Học A"]
-transform = Transform( -49.5546, 49.3629, 29.8764, -120.17, -56.2115, 15.2459, 151.999, -28.3473, 21.7936, 48.4582, 138.583, 125.362 )
-shape = SubResource( 10 )
-
-[node name="Dãy học A" type="MeshInstance" parent="Dãy Học A/CollisionShape"]
-mesh = SubResource( 9 )
-skeleton = NodePath("../../..")
-material/0 = ExtResource( 4 )
-
-[node name="Hội trường" type="MeshInstance" parent="."]
-transform = Transform( -8.74228e-06, 0, 40, 0, 80, 0, -82.8309, 0, -7.24131e-07, -159.479, 77.1509, 386.681 )
-mesh = SubResource( 9 )
-material/0 = SubResource( 11 )
-
-[node name="StaticBody" type="StaticBody" parent="Hội trường"]
-
-[node name="CollisionShape" type="CollisionShape" parent="Hội trường/StaticBody"]
-shape = SubResource( 12 )
-
-[node name="Dãy thực hành" type="MeshInstance" parent="."]
-transform = Transform( 82.8309, 0, -1.02432e-06, 0, 80, 0, -5.12162e-06, 0, 40, -5.40231, 77.1509, 258.512 )
-mesh = SubResource( 9 )
-material/0 = SubResource( 13 )
-
-[node name="StaticBody" type="StaticBody" parent="Dãy thực hành"]
-
-[node name="CollisionShape" type="CollisionShape" parent="Dãy thực hành/StaticBody"]
-shape = SubResource( 14 )
-
-[node name="Bãi xe" type="MeshInstance" parent="."]
-transform = Transform( 82.8309, 0, -1.02432e-06, 0, 80, 0, -5.12162e-06, 0, 40, -5.40231, 77.1509, 365.654 )
-mesh = SubResource( 9 )
-material/0 = SubResource( 15 )
-
-[node name="StaticBody" type="StaticBody" parent="Bãi xe"]
-
-[node name="CollisionShape" type="CollisionShape" parent="Bãi xe/StaticBody"]
-shape = SubResource( 16 )
-
-[node name="Phòng bảo vệ" type="MeshInstance" parent="."]
-transform = Transform( 35.4639, 0, -4.38561e-07, 0, 80, 0, -5.12162e-06, 0, 40, 181.235, 77.1509, 365.654 )
-mesh = SubResource( 9 )
-material/0 = SubResource( 15 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Phòng bảo vệ"]
-transform = Transform( 1, 0, -8.88178e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-shape = SubResource( 17 )
-
-[node name="Dãy Gang chính và giáo viên" type="MeshInstance" parent="."]
-transform = Transform( -8.74228e-06, 0, 40, 0, 80, 0, -82.8309, 0, -7.24131e-07, -150.259, 78.6329, 205.578 )
-mesh = SubResource( 9 )
-material/0 = SubResource( 18 )
-
-[node name="StaticBody" type="StaticBody" parent="Dãy Gang chính và giáo viên"]
-
-[node name="CollisionShape" type="CollisionShape" parent="Dãy Gang chính và giáo viên/StaticBody"]
-shape = SubResource( 19 )
 
 [node name="Spatial" parent="." instance=ExtResource( 6 )]
 transform = Transform( 0.292393, 0, 0, 0, 0.292393, 0, 0, 0, 1, -237.341, 2.51062, 62.362 )

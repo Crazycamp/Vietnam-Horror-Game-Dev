@@ -117,3 +117,8 @@ anims/walk_side_front = SubResource( 5 )
 tree_root = SubResource( 12 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
+
+[node name="InterpolatedCamera" type="InterpolatedCamera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 3, 9 )
+current = true
+enabled = true
