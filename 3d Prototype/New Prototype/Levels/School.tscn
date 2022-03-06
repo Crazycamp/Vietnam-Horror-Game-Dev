@@ -60,7 +60,6 @@ layer = 100
 
 [node name="Học sinh" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -242.024, 3.68304, 62.728 )
-speed = 13.0
 
 [node name="Ground" type="StaticBody" parent="."]
 transform = Transform( 341.066, 0, 0, 0, 1, 0, 0, 0, 324.451, -2.19417, -0.265377, 194.575 )
