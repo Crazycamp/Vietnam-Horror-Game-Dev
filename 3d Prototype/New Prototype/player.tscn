@@ -100,9 +100,6 @@ shaded = true
 texture = ExtResource( 1 )
 hframes = 6
 
-[node name="Camera" type="Camera" parent="."]
-transform = Transform( 0.999992, 0.00234746, -0.00317249, -0.00123603, 0.949711, 0.313126, 0.003748, -0.31312, 0.949706, -0.0336513, 3.05088, 9.98454 )
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "idle_front"
 anims/RESET = SubResource( 3 )
@@ -119,6 +116,6 @@ anim_player = NodePath("../AnimationPlayer")
 active = true
 
 [node name="InterpolatedCamera" type="InterpolatedCamera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 3, 9 )
+transform = Transform( 1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 2.86096, 7.21697 )
 current = true
 enabled = true
