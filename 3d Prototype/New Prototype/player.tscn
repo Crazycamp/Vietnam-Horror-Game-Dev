@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=2]
 
-[ext_resource path="res://assets/character/Character Spritesheet.png" type="Texture" id=1]
+[ext_resource path="res://assets/character/front.png" type="Texture" id=1]
 [ext_resource path="res://Script/player.gd" type="Script" id=2]
 [ext_resource path="res://assets/character/idle_front.tres" type="Animation" id=3]
 [ext_resource path="res://assets/character/idle_back.tres" type="Animation" id=4]
@@ -8,7 +8,7 @@
 [ext_resource path="res://assets/character/walk_back.tres" type="Animation" id=6]
 
 [sub_resource type="CapsuleShape" id=1]
-height = 3.53529
+height = 4.66005
 
 [sub_resource type="Animation" id=2]
 length = 0.001
@@ -87,20 +87,19 @@ nodes/Animation/position = Vector2( 40, 80 )
 "nodes/Animation 6/position" = Vector2( 500, 240 )
 nodes/output/position = Vector2( 760, 160 )
 
-[node name="Học sinh" type="KinematicBody" groups=[
-"player",
-]]
+[node name="Học sinh" type="KinematicBody" groups=["player"]]
 script = ExtResource( 2 )
+sprint_speed = 10.0
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 0.999992, -0.00374166, -0.00125509, -0.00123603, 0.00509162, -0.999986, 0.003748, 0.99998, 0.00508695, 0, 0, 0 )
+transform = Transform( 0.999992, -0.00374166, -0.00125509, -0.00123603, 0.00509162, -0.999986, 0.003748, 0.99998, 0.00508695, -0.0519476, -1.37471, 0 )
 shape = SubResource( 1 )
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform( 0.838062, 0.00105185, -0.00374548, -0.00103587, 0.838057, 0.00509685, 0.00314108, -0.00426325, 1.001, -0.232477, -0.0253353, 0.000128882 )
 shaded = true
+alpha_cut = 2
 texture = ExtResource( 1 )
-hframes = 6
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "idle_front"
@@ -118,12 +117,11 @@ anim_player = NodePath("../AnimationPlayer")
 active = true
 
 [node name="InterpolatedCamera" type="InterpolatedCamera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 2.86096, 7.21697 )
+transform = Transform( 1, 0, 0, 0, 1, -5.96046e-08, 0, 5.96046e-08, 1, 0, 0.10462, 7.21697 )
 current = true
 enabled = true
 
 [node name="SprintTimer" type="Timer" parent="."]
-wait_time = 3.0
-one_shot = true
+wait_time = 0.05
 
 [connection signal="timeout" from="SprintTimer" to="." method="_on_SprintTimer_timeout"]

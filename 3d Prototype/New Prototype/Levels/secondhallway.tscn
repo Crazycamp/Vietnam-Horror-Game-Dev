@@ -14,10 +14,10 @@
 environment = ExtResource( 2 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( 0.0567773, -0.996194, 0.0661345, 0.701579, 0.0869395, 0.707268, -0.710326, 0.0062418, 0.703845, 0, 14, 22.2513 )
-light_energy = 0.229
+transform = Transform( 0.221488, -0.926359, -0.304633, 0.905376, 0.0792941, 0.417142, -0.362268, -0.3682, 0.856266, 0, 14, 22.2513 )
+light_energy = 0.1
 shadow_enabled = true
-shadow_bias = 3.0
+shadow_reverse_cull_face = true
 
 [node name="Học sinh" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.691383, 6.45315, 5.85044 )
@@ -34,7 +34,7 @@ transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.5302
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.53023, 5.65551, 11.514 )
 
 [node name="Spatial4" parent="Walls" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.2143, 5.65551, -4.43067 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7278, 5.65551, -4.43067 )
 
 [node name="Spatial5" parent="Walls" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32.7155, 5.65551, -4.43067 )
@@ -144,4 +144,4 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5371, 1.59855, 14.5595 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40.3945, 1.59855, 14.5595 )
 
 [node name="Cửa lớp học" parent="." instance=ExtResource( 7 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.9903, 5.01056, -4.59355 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.4586, 5.01056, -4.59355 )
