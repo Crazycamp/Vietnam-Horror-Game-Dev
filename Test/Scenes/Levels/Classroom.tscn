@@ -1,0 +1,116 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scenes/Levels/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/Enviroments/floor.png" type="Texture" id=2]
+[ext_resource path="res://assets/Enviroments/floor 2.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/objects/Box.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/objects/Classroom Lights.tscn" type="PackedScene" id=5]
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.560237, 18.2844, 1 )
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 18.0397, 0.653816, 1 )
+
+[sub_resource type="ProceduralSky" id=4]
+sky_top_color = Color( 0.968627, 0.92549, 0.815686, 1 )
+sky_horizon_color = Color( 1, 1, 1, 1 )
+sky_energy = 0.0
+
+[sub_resource type="Environment" id=5]
+background_mode = 2
+background_sky = SubResource( 4 )
+fog_enabled = true
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Wall2" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4647, 0, 0.602689 )
+
+[node name="Sprite3D" type="Sprite3D" parent="Wall2"]
+transform = Transform( -4.37114e-08, -3, 0, 1, -1.31134e-07, 0, 0, 0, 1, 1.77015, 0, 0 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall2"]
+shape = SubResource( 2 )
+
+[node name="Wall3" type="StaticBody" parent="."]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0.696411, -1.47159, 0.548616 )
+
+[node name="Sprite3D" type="Sprite3D" parent="Wall3"]
+transform = Transform( -4.37114e-08, -3, 0, 1, -1.31134e-07, 0, 0, 0, 1, 0, 0, 0 )
+shaded = true
+texture = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25725, 0, 0 )
+shape = SubResource( 2 )
+
+[node name="Wall" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.1004, 1.90735e-06, 0.0277634 )
+
+[node name="Sprite3D" type="Sprite3D" parent="Wall"]
+transform = Transform( -4.37114e-08, -3, 0, 1, -1.31134e-07, 0, 0, 0, 1, 0, 0, 0 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25725, 0, 0 )
+shape = SubResource( 2 )
+
+[node name="Roof" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.5598, 0 )
+collision_layer = 2
+collision_mask = 3
+
+[node name="Sprite3D" type="Sprite3D" parent="Roof"]
+transform = Transform( 1, 0, 0, 0, 10, 0, 0, 0, 1, -0.0349426, -5.85403, -0.0255508 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Roof"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.6865, 0 )
+shape = SubResource( 1 )
+
+[node name="Floor2" type="StaticBody" parent="."]
+transform = Transform( 5, 0, 0, 0, 10, 0, 0, 0, 1, 0, 4.78231, -5.34236 )
+collision_layer = 2
+collision_mask = 3
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor2"]
+shape = SubResource( 1 )
+
+[node name="Sprite3D" type="Sprite3D" parent="Floor2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.56331 )
+modulate = Color( 0.678431, 0.678431, 0.678431, 1 )
+shaded = true
+texture = ExtResource( 3 )
+
+[node name="Floor" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.157494 )
+collision_layer = 2
+collision_mask = 3
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor"]
+shape = SubResource( 1 )
+
+[node name="Sprite3D" type="Sprite3D" parent="Floor"]
+shaded = true
+texture = ExtResource( 3 )
+
+[node name="Box" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.96835, 1.09621, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.52979, -0.0620238 )
+
+[node name="Camera" parent="Player" index="2"]
+fov = 42.1875
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 5 )
+
+[node name="Lights" type="Spatial" parent="."]
+
+[node name="Classroom Lights" parent="Lights" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.06268, 6.33596, -3.09197 )
+
+[editable path="Player"]
