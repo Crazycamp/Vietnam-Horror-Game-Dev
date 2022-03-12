@@ -13,6 +13,7 @@ func _physics_process(delta) -> void:
 		Input.get_action_strength("move_right") - Input.get_action_strength("move_left"),
 		Input.get_action_strength("move_backwards") - Input.get_action_strength("move_towards")).normalized()
 	
+	if Input
 	if Input.is_action_pressed("sprint"):
 		sprint_timer.start()
 		sprinting = true 
