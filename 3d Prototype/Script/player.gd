@@ -29,7 +29,6 @@ func _physics_process(delta) -> void:
 		a = wrapi(int(a), 0, 8)
 		current_animation = "run"
 	
-	if Input
 	if Input.is_action_pressed("sprint"):
 		sprint_timer.start()
 		sprinting = true 
