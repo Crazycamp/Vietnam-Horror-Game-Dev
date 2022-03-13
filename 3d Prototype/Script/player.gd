@@ -48,9 +48,9 @@ func _physics_process(delta) -> void:
 	)
 	move_and_slide(velocity, FLOOR_NORMAL)
 	
-	# If the code cannot run, please delete the line below then insert it back
-	# Currently we still don't have AnimatedSprite yet so the line below cannot executed
-	$AnimatedSprite.animation = current_animation + str(a)
+#	# If the code cannot run, please delete the line below then insert it back
+#	# Currently we still don't have AnimatedSprite yet so the line below cannot executed
+#	$AnimatedSprite.animation = current_animation + str(a)
 
 		
 func _on_SprintTimer_timeout() -> void:
