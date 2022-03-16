@@ -4,7 +4,7 @@
 
 [sub_resource type="BoxShape" id=2]
 
-[node name="Thúng rác" type="Spatial"]
+[node name="Thùng rác" type="Spatial"]
 
 [node name="StaticBody" type="StaticBody" parent="."]
 transform = Transform( 0.73799, 0, 0, 0, 1.23009, 0, 0, 0, 0.482873, 0, 0, 0 )

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Nhạc Lễ Chào Cờ Quốc Ca Việt Nam Có Lời Hát (online-audio-converter.com).wav-0ec29dff6268fc362588fb80714e28c6.sample"
+
+[deps]
+
+source_file="res://assets/sounds/Nhạc Lễ Chào Cờ Quốc Ca Việt Nam Có Lời Hát (online-audio-converter.com).wav"
+dest_files=[ "res://.import/Nhạc Lễ Chào Cờ Quốc Ca Việt Nam Có Lời Hát (online-audio-converter.com).wav-0ec29dff6268fc362588fb80714e28c6.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

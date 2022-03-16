@@ -8,7 +8,7 @@
 [ext_resource path="res://Main Game/playerrelated/animations/walk_back.tres" type="Animation" id=6]
 
 [sub_resource type="CapsuleShape" id=12]
-height = 4.81458
+height = 5.67619
 
 [sub_resource type="Animation" id=2]
 length = 0.001
@@ -116,12 +116,13 @@ tree_root = SubResource( 11 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 
-[node name="InterpolatedCamera" type="InterpolatedCamera" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, -5.96046e-08, 0, 5.96046e-08, 1, 0, 0.10462, 7.21697 )
-current = true
-enabled = true
-
 [node name="SprintTimer" type="Timer" parent="."]
 wait_time = 0.05
+
+[node name="SpringArm" type="SpringArm" parent="."]
+spring_length = 7.0
+margin = 0.03
+
+[node name="Camera" type="Camera" parent="SpringArm"]
 
 [connection signal="timeout" from="SprintTimer" to="." method="_on_SprintTimer_timeout"]

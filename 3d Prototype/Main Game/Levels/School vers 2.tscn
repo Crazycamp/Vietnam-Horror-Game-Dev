@@ -1,14 +1,19 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=17 format=2]
 
-[ext_resource path="res://Main Game/interiors/titles.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Main Game/interiors/sàn gạch.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Main Game/interiors/Pillars.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Main Game/interiors/Doors.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Main Game/interiors/cửa ra vào.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Main Game/interiors/fences.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Main Game/interiors/walls.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Main Game/interiors/tường học.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Main Game/playerrelated/player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/horror enviroment.tres" type="Environment" id=7]
 [ext_resource path="res://Main Game/interiors/mobilefence.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Main Game/interiors/Stairway/block1.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Main Game/interiors/Bàn học.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Main Game/interiors/Ghế.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Main Game/interiors/loa trường.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Main Game/interiors/Bậc giáo viên.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Main Game/interiors/Stairway/cầu thang.tscn" type="PackedScene" id=14]
 
 [sub_resource type="BoxShape" id=1]
 
@@ -34,9 +39,6 @@ material/0 = null
 transform = Transform( 0.221488, -0.926359, -0.304634, 0.905812, 0.079737, 0.41611, -0.361177, -0.368104, 0.856768, 0, 10, 22.2513 )
 light_energy = 0.07
 shadow_enabled = true
-
-[node name="Học sinh" parent="." instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.691383, 6.45315, 5.85044 )
 
 [node name="Walls" type="Spatial" parent="."]
 
@@ -584,3 +586,24 @@ spot_angle = 45.8097
 transform = Transform( -4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, 107.535, 10.8661, 83.6971 )
 spot_range = 15.5422
 spot_angle = 45.8097
+
+[node name="Spatial4" parent="." instance=ExtResource( 11 )]
+transform = Transform( 0.0381436, 0, -0.999272, 0, 2.3, 0, 0.999272, 0, 0.0381436, 33.4508, 2.54956, 28.3665 )
+
+[node name="Spatial5" parent="." instance=ExtResource( 11 )]
+transform = Transform( 0.0381436, 0, -0.999272, 0, 2.3, 0, 0.999272, 0, 0.0381436, 30.733, 2.54956, 28.4702 )
+
+[node name="Bàn học" parent="." instance=ExtResource( 10 )]
+transform = Transform( 0.209738, 2.24884, 9.83e-08, 0, -4.94023e-08, 1.13019, 0.977758, -0.482397, -2.10863e-08, 32.495, 1.66391, 31.7787 )
+
+[node name="loa trường" parent="." instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.2937, 1.9657, 31.4441 )
+
+[node name="Bậc giáo viên" parent="loa trường" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.5015, -1.78567, 25.8222 )
+
+[node name="cầu thang" parent="." instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.987529, 0.180261, 19.3658 )
+
+[node name="Học sinh" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.691383, 6.28642, 26.9637 )

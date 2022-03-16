@@ -6,10 +6,12 @@
 
 [sub_resource type="CubeMesh" id=2]
 
-[node name="Spatial" type="Spatial"]
+[node name="ghế" type="Spatial"]
 transform = Transform( 1, 0, 0, 0, 2.3, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="StaticBody" type="RigidBody" parent="."]
+mass = 1.16
+gravity_scale = 32.1
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
 shape = SubResource( 1 )
