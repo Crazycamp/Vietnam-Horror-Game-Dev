@@ -2,10 +2,15 @@
 First draft:
 
 Main character from the city.
-Lost parents due to house collapse on them.
-She survived but suffered from losing her love ones.
-They left her only but a medalion.
+Section (walking in her room and explore her home, UI, inventory)
+Lost parents due to house fire collapse on them.
+Section where we were chased because fire are near
+She survived (could be the player has to go and take out the trash after dinner so she survived) but suffered from losing her love ones.
+
 A distance relatives adopted her so she moved to a different city .
+Scene with players standing and hearing over the uncle and aunty conversation about her new life
+
+
 She was not very welcome.
 The man figure is running for town leader (something with our Vietnamese democratic systems) so adopting her helped him with his publicity.
 The woman figure was jelous of her sister so the main character was also hated.
