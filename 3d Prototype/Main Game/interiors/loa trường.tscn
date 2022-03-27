@@ -21,3 +21,4 @@ material/0 = null
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource( 1 )
 autoplay = true
+emission_angle_enabled = true

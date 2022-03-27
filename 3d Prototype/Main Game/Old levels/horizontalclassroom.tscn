@@ -1,0 +1,466 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Main Game/Classroom Interior.png" type="Texture" id=1]
+[ext_resource path="res://Main Game/playerrelated/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/classroom.tres" type="Environment" id=3]
+[ext_resource path="res://assets/material/floor.tres" type="Material" id=4]
+[ext_resource path="res://Main Game/interiors/Bàn học.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Main Game/interiors/Bậc giáo viên.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Main Game/interiors/Ghế.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Main Game/interiors/Bảng.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Main Game/levelblocks/sàn gạch.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Main Game/levelblocks/tường học.tscn" type="PackedScene" id=10]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 20, 1, 10 )
+
+[sub_resource type="CubeMesh" id=2]
+size = Vector3( 40, 2, 20 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.670588, 0.611765, 0.415686, 1 )
+
+[sub_resource type="Skin" id=4]
+bind_count = 1
+bind/0/name = ""
+bind/0/bone = -1
+bind/0/pose = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="Spatial" type="Spatial"]
+
+[node name="old scene" type="Spatial" parent="."]
+visible = false
+
+[node name="Floor" type="StaticBody" parent="old scene"]
+collision_mask = 2
+
+[node name="Sprite3D" type="Sprite3D" parent="old scene/Floor"]
+transform = Transform( -4.58379e-07, -10.4865, 4.37114e-08, 9.16759e-07, 4.58379e-07, 1, -10.4865, 4.58379e-07, 8.74228e-08, 0, 1.0529, 0 )
+visible = false
+opacity = 0.16
+texture = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="old scene/Floor"]
+transform = Transform( 1.86705, 0, 0, 0, 1, 0, 0, 0, 1.86705, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="old scene/Floor"]
+transform = Transform( 1.3188, 0, 0, 0, 1, 0, 0, 0, 1.86705, 0, 0, 0 )
+mesh = SubResource( 2 )
+material/0 = SubResource( 3 )
+
+[node name="Wall2" type="StaticBody" parent="old scene"]
+transform = Transform( -1.3, 5.68247e-08, -1.06197e-07, -2.38377e-08, 2.38378e-08, 1.01917, 8.16902e-08, 1.86885, -1.52667e-07, 0.379148, 10.2438, -19.1976 )
+collision_mask = 2
+
+[node name="CollisionShape" type="CollisionShape" parent="old scene/Wall2"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="old scene/Wall2"]
+transform = Transform( 1, 0, 1.77455e-14, 0, 1, -1.42109e-14, 4.30668e-15, -3.55271e-15, 1, 0, 0, 0 )
+mesh = SubResource( 2 )
+skin = SubResource( 4 )
+material/0 = ExtResource( 4 )
+
+[node name="Wall3" type="StaticBody" parent="old scene"]
+transform = Transform( -0.860798, 3.76266e-08, -7.03186e-08, -2.38377e-08, 2.38378e-08, 1.01917, 8.16902e-08, 1.86885, -1.52667e-07, 0.379148, 10.2438, 16.7913 )
+collision_mask = 2
+
+[node name="CollisionShape2" type="CollisionShape" parent="old scene/Wall3"]
+transform = Transform( 1.45865, -2.00481e-08, 7.95191e-08, -2.00482e-08, 1, -4.20523e-08, 2.27679e-08, -1.20403e-08, 0.485223, 0.0132052, -9.53674e-07, 4.87711 )
+shape = SubResource( 1 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="old scene/Wall3"]
+transform = Transform( 1.45865, -2.00481e-08, 7.95191e-08, -2.00482e-08, 1, -4.20523e-08, 2.27679e-08, -1.20403e-08, 0.485223, 0.0132052, -9.53674e-07, 4.87711 )
+mesh = SubResource( 2 )
+skin = SubResource( 4 )
+skeleton = NodePath("../MeshInstance")
+material/0 = ExtResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="old scene/Wall3"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="old scene/Wall3"]
+transform = Transform( 1, 0, -3.57079e-15, -3.55271e-15, 1, -1.42109e-14, -1.02239e-15, 0, 1, 0, 0, 0 )
+mesh = SubResource( 2 )
+skin = SubResource( 4 )
+material/0 = ExtResource( 4 )
+
+[node name="Wall1" type="StaticBody" parent="old scene"]
+transform = Transform( -4.37114e-08, -1, 0, 0.533522, -2.3321e-08, 0, 0, 0, 1.86885, -25.6208, 9.67125, -0.0688701 )
+collision_mask = 2
+
+[node name="CollisionShape" type="CollisionShape" parent="old scene/Wall1"]
+shape = SubResource( 1 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="old scene/Wall1"]
+transform = Transform( 1, 3.55271e-15, 0, -3.55271e-15, 1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="old scene/Wall1"]
+mesh = SubResource( 2 )
+skin = SubResource( 4 )
+material/0 = ExtResource( 4 )
+
+[node name="Wall4" type="StaticBody" parent="old scene"]
+transform = Transform( -4.37114e-08, -1, 0, 0.533522, -2.3321e-08, 0, 0, 0, 1.86885, 25.3792, 9.67125, -0.0688701 )
+collision_mask = 2
+
+[node name="CollisionShape" type="CollisionShape" parent="old scene/Wall4"]
+shape = SubResource( 1 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="old scene/Wall4"]
+transform = Transform( 1, 3.55271e-15, 0, -3.55271e-15, 1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="old scene/Wall4"]
+mesh = SubResource( 2 )
+skin = SubResource( 4 )
+material/0 = ExtResource( 4 )
+
+[node name="Dãy bàn" type="Spatial" parent="old scene"]
+
+[node name="Bàn học" parent="old scene/Dãy bàn" instance=ExtResource( 5 )]
+transform = Transform( 1.57796, 0, 0, 0, -1.09477e-07, 1.08893, 0, -3.6293, -6.89747e-08, -9.48832, 2.1161, 13.3702 )
+
+[node name="Bàn học2" parent="old scene/Dãy bàn" instance=ExtResource( 5 )]
+transform = Transform( 1.57796, 0, 0, 0, -1.09477e-07, 1.08893, 0, -3.6293, -6.89747e-08, -2.87926, 2.1161, 13.3702 )
+
+[node name="Bàn học3" parent="old scene/Dãy bàn" instance=ExtResource( 5 )]
+transform = Transform( 1.57796, 0, 0, 0, -1.09477e-07, 1.08893, 0, -3.6293, -6.89747e-08, 3.55117, 2.1161, 13.3702 )
+
+[node name="Bàn học4" parent="old scene/Dãy bàn" instance=ExtResource( 5 )]
+transform = Transform( 1.57796, 0, 0, 0, -1.09477e-07, 1.08893, 0, -3.6293, -6.89747e-08, 10.2284, 2.1161, 13.3702 )
+
+[node name="Ghế" parent="old scene/Dãy bàn" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2.3, 0, 0, 0, 1, -6.68995, 1.99442, 15.153 )
+
+[node name="Ghế2" parent="old scene/Dãy bàn" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2.3, 0, 0, 0, 1, -6.68995, 1.99442, 11.7467 )
+
+[node name="Ghế3" parent="old scene/Dãy bàn" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2.3, 0, 0, 0, 1, 0.239948, 1.99442, 15.427 )
+
+[node name="Ghế4" parent="old scene/Dãy bàn" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2.3, 0, 0, 0, 1, 0.239948, 1.99442, 12.0208 )
+
+[node name="Ghế5" parent="old scene/Dãy bàn" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2.3, 0, 0, 0, 1, 6.93494, 1.99442, 14.7614 )
+
+[node name="Ghế6" parent="old scene/Dãy bàn" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2.3, 0, 0, 0, 1, 6.93494, 1.99442, 11.3552 )
+
+[node name="Ghế7" parent="old scene/Dãy bàn" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2.3, 0, 0, 0, 1, 13.1601, 1.99442, 15.2313 )
+
+[node name="Ghế8" parent="old scene/Dãy bàn" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2.3, 0, 0, 0, 1, 13.1601, 1.99442, 11.825 )
+
+[node name="Dãy bàn2" type="Spatial" parent="old scene"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10.076 )
+
+[node name="Bàn học" parent="old scene/Dãy bàn2" instance=ExtResource( 5 )]
+transform = Transform( 1.57796, 0, 0, 0, -1.09477e-07, 1.08893, 0, -3.6293, -6.89747e-08, -9.48832, 2.1161, 13.3702 )
+
+[node name="Bàn học2" parent="old scene/Dãy bàn2" instance=ExtResource( 5 )]
+transform = Transform( 1.57796, 0, 0, 0, -1.09477e-07, 1.08893, 0, -3.6293, -6.89747e-08, -2.87926, 2.1161, 13.3702 )
+
+[node name="Bàn học3" parent="old scene/Dãy bàn2" instance=ExtResource( 5 )]
+transform = Transform( 1.57796, 0, 0, 0, -1.09477e-07, 1.08893, 0, -3.6293, -6.89747e-08, 3.55117, 2.1161, 13.3702 )
+
+[node name="Bàn học4" parent="old scene/Dãy bàn2" instance=ExtResource( 5 )]
+transform = Transform( 1.57796, 0, 0, 0, -1.09477e-07, 1.08893, 0, -3.6293, -6.89747e-08, 10.2284, 2.1161, 13.3702 )
+
+[node name="Ghế" parent="old scene/Dãy bàn2" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2.3, 0, 0, 0, 1, -6.68995, 1.99442, 15.153 )
+
+[node name="Ghế2" parent="old scene/Dãy bàn2" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2.3, 0, 0, 0, 1, -6.68995, 1.99442, 11.7467 )
+
+[node name="Ghế3" parent="old scene/Dãy bàn2" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2.3, 0, 0, 0, 1, 0.239948, 1.99442, 15.427 )
+
+[node name="Ghế4" parent="old scene/Dãy bàn2" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2.3, 0, 0, 0, 1, 0.239948, 1.99442, 12.0208 )
+
+[node name="Ghế5" parent="old scene/Dãy bàn2" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2.3, 0, 0, 0, 1, 6.93494, 1.99442, 14.7614 )
+
+[node name="Ghế6" parent="old scene/Dãy bàn2" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2.3, 0, 0, 0, 1, 6.93494, 1.99442, 11.3552 )
+
+[node name="Ghế7" parent="old scene/Dãy bàn2" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2.3, 0, 0, 0, 1, 13.1601, 1.99442, 15.2313 )
+
+[node name="Ghế8" parent="old scene/Dãy bàn2" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2.3, 0, 0, 0, 1, 13.1601, 1.99442, 11.825 )
+
+[node name="Dãy bàn3" type="Spatial" parent="old scene"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -17.3109 )
+
+[node name="Bàn học" parent="old scene/Dãy bàn3" instance=ExtResource( 5 )]
+transform = Transform( 1.57796, 0, 0, 0, -1.09477e-07, 1.08893, 0, -3.6293, -6.89747e-08, -9.48832, 2.1161, 13.3702 )
+
+[node name="Bàn học2" parent="old scene/Dãy bàn3" instance=ExtResource( 5 )]
+transform = Transform( 1.57796, 0, 0, 0, -1.09477e-07, 1.08893, 0, -3.6293, -6.89747e-08, -2.87926, 2.1161, 13.3702 )
+
+[node name="Bàn học3" parent="old scene/Dãy bàn3" instance=ExtResource( 5 )]
+transform = Transform( 1.57796, 0, 0, 0, -1.09477e-07, 1.08893, 0, -3.6293, -6.89747e-08, 3.55117, 2.1161, 13.3702 )
+
+[node name="Bàn học4" parent="old scene/Dãy bàn3" instance=ExtResource( 5 )]
+transform = Transform( 1.57796, 0, 0, 0, -1.09477e-07, 1.08893, 0, -3.6293, -6.89747e-08, 10.2284, 2.1161, 13.3702 )
+
+[node name="Ghế" parent="old scene/Dãy bàn3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2.3, 0, 0, 0, 1, -6.68995, 1.99442, 15.153 )
+
+[node name="Ghế2" parent="old scene/Dãy bàn3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2.3, 0, 0, 0, 1, -6.68995, 1.99442, 11.7467 )
+
+[node name="Ghế3" parent="old scene/Dãy bàn3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2.3, 0, 0, 0, 1, 0.239948, 1.99442, 15.427 )
+
+[node name="Ghế4" parent="old scene/Dãy bàn3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2.3, 0, 0, 0, 1, 0.239948, 1.99442, 12.0208 )
+
+[node name="Ghế5" parent="old scene/Dãy bàn3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2.3, 0, 0, 0, 1, 6.93494, 1.99442, 14.7614 )
+
+[node name="Ghế6" parent="old scene/Dãy bàn3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2.3, 0, 0, 0, 1, 6.93494, 1.99442, 11.3552 )
+
+[node name="Ghế7" parent="old scene/Dãy bàn3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2.3, 0, 0, 0, 1, 13.1601, 1.99442, 15.2313 )
+
+[node name="Ghế8" parent="old scene/Dãy bàn3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2.3, 0, 0, 0, 1, 13.1601, 1.99442, 11.825 )
+
+[node name="Dãy bàn4" type="Spatial" parent="old scene"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -26.8617 )
+
+[node name="Bàn học" parent="old scene/Dãy bàn4" instance=ExtResource( 5 )]
+transform = Transform( 1.57796, 0, 0, 0, -1.09477e-07, 1.08893, 0, -3.6293, -6.89747e-08, -9.48832, 2.1161, 13.3702 )
+
+[node name="Bàn học2" parent="old scene/Dãy bàn4" instance=ExtResource( 5 )]
+transform = Transform( 1.57796, 0, 0, 0, -1.09477e-07, 1.08893, 0, -3.6293, -6.89747e-08, -2.87926, 2.1161, 13.3702 )
+
+[node name="Bàn học3" parent="old scene/Dãy bàn4" instance=ExtResource( 5 )]
+transform = Transform( 1.57796, 0, 0, 0, -1.09477e-07, 1.08893, 0, -3.6293, -6.89747e-08, 3.55117, 2.1161, 13.3702 )
+
+[node name="Bàn học4" parent="old scene/Dãy bàn4" instance=ExtResource( 5 )]
+transform = Transform( 1.57796, 0, 0, 0, -1.09477e-07, 1.08893, 0, -3.6293, -6.89747e-08, 10.2284, 2.1161, 13.3702 )
+
+[node name="Ghế" parent="old scene/Dãy bàn4" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2.3, 0, 0, 0, 1, -6.68995, 1.99442, 15.153 )
+
+[node name="Ghế2" parent="old scene/Dãy bàn4" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2.3, 0, 0, 0, 1, -6.68995, 1.99442, 11.7467 )
+
+[node name="Ghế3" parent="old scene/Dãy bàn4" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2.3, 0, 0, 0, 1, 0.239948, 1.99442, 15.427 )
+
+[node name="Ghế4" parent="old scene/Dãy bàn4" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2.3, 0, 0, 0, 1, 0.239948, 1.99442, 12.0208 )
+
+[node name="Ghế5" parent="old scene/Dãy bàn4" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2.3, 0, 0, 0, 1, 6.93494, 1.99442, 14.7614 )
+
+[node name="Ghế6" parent="old scene/Dãy bàn4" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2.3, 0, 0, 0, 1, 6.93494, 1.99442, 11.3552 )
+
+[node name="Ghế7" parent="old scene/Dãy bàn4" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2.3, 0, 0, 0, 1, 13.1601, 1.99442, 15.2313 )
+
+[node name="Ghế8" parent="old scene/Dãy bàn4" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2.3, 0, 0, 0, 1, 13.1601, 1.99442, 11.825 )
+
+[node name="Bàn học" parent="old scene" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, -1.00536e-07, 1, 0, -2.3, -4.37114e-08, -17.1943, 2.83764, -14.2092 )
+
+[node name="Bậc giáo viên" parent="old scene" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21.9648, 1.39381, -1.99457 )
+
+[node name="Spatial" parent="old scene/Bậc giáo viên" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2.3, 0, 0, 0, 1, 1.86014, 2.68377, -11.5838 )
+
+[node name="Bảng phấn" parent="old scene" instance=ExtResource( 8 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -24.3154, 8.2048, 0.784144 )
+
+[node name="Lights" type="Spatial" parent="old scene"]
+
+[node name="SpotLight" type="SpotLight" parent="old scene/Lights"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -11.0271, 18, 6.47201 )
+light_specular = 5.0
+shadow_enabled = true
+shadow_reverse_cull_face = true
+spot_range = 21.5273
+spot_angle = 40.7813
+
+[node name="SpotLight2" type="SpotLight" parent="old scene/Lights"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -11.0271, 18, -6.5015 )
+light_specular = 5.0
+shadow_enabled = true
+shadow_reverse_cull_face = true
+spot_range = 21.5273
+spot_angle = 40.7813
+
+[node name="SpotLight3" type="SpotLight" parent="old scene/Lights"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 12.2268, 18, 6.47201 )
+light_specular = 5.0
+shadow_enabled = true
+shadow_reverse_cull_face = true
+spot_range = 21.5273
+spot_angle = 40.7813
+
+[node name="SpotLight4" type="SpotLight" parent="old scene/Lights"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 12.2268, 18, -6.5015 )
+light_specular = 5.0
+shadow_enabled = true
+shadow_reverse_cull_face = true
+spot_range = 21.5273
+spot_angle = 40.7813
+
+[node name="SpotLight5" type="SpotLight" parent="old scene/Lights"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.227088, 18, 6.47201 )
+light_specular = 5.0
+shadow_enabled = true
+shadow_reverse_cull_face = true
+spot_range = 21.5273
+spot_angle = 40.7813
+
+[node name="SpotLight6" type="SpotLight" parent="old scene/Lights"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.227088, 18, -6.5015 )
+light_specular = 5.0
+shadow_enabled = true
+shadow_reverse_cull_face = true
+spot_range = 21.5273
+spot_angle = 40.7813
+
+[node name="player" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.5143, 4.69987, 51.4101 )
+gravity = null
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource( 3 )
+
+[node name="lớp học" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.9745, 0, 32.2774 )
+
+[node name="sàn nhà" type="Spatial" parent="lớp học"]
+
+[node name="sàn gạch" parent="lớp học/sàn nhà" instance=ExtResource( 9 )]
+
+[node name="sàn gạch2" parent="lớp học/sàn nhà" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3406, 0, 0 )
+
+[node name="sàn gạch3" parent="lớp học/sàn nhà" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.6447, 4.76837e-07, -0.00100327 )
+
+[node name="sàn gạch4" parent="lớp học/sàn nhà" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30.9853, 4.76837e-07, -0.00100327 )
+
+[node name="sàn gạch5" parent="lớp học/sàn nhà" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.3466, 4.76837e-07, -0.00100327 )
+
+[node name="sàn gạch6" parent="lớp học/sàn nhà" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10.0561 )
+
+[node name="sàn gạch7" parent="lớp học/sàn nhà" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3406, 0, 10.0561 )
+
+[node name="sàn gạch8" parent="lớp học/sàn nhà" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.6447, 4.76837e-07, 10.0551 )
+
+[node name="sàn gạch9" parent="lớp học/sàn nhà" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30.9853, 4.76837e-07, 10.0551 )
+
+[node name="sàn gạch10" parent="lớp học/sàn nhà" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.3466, 4.76837e-07, 10.0551 )
+
+[node name="sàn gạch11" parent="lớp học/sàn nhà" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20.1501 )
+
+[node name="sàn gạch12" parent="lớp học/sàn nhà" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3406, 0, 20.1501 )
+
+[node name="sàn gạch13" parent="lớp học/sàn nhà" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.6447, 4.76837e-07, 20.1491 )
+
+[node name="sàn gạch14" parent="lớp học/sàn nhà" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30.9853, 4.76837e-07, 20.1491 )
+
+[node name="sàn gạch15" parent="lớp học/sàn nhà" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.3466, 4.76837e-07, 20.1491 )
+
+[node name="tường nhà" type="Spatial" parent="lớp học"]
+
+[node name="tường dọc" type="Spatial" parent="lớp học/tường nhà"]
+
+[node name="tường9" parent="lớp học/tường nhà/tường dọc" instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 45.987, 5.6945, -0.384647 )
+
+[node name="tường10" parent="lớp học/tường nhà/tường dọc" instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 45.987, 5.6945, 6.86337 )
+
+[node name="tường11" parent="lớp học/tường nhà/tường dọc" instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 45.987, 5.6945, 14.0687 )
+
+[node name="tường12" parent="lớp học/tường nhà/tường dọc" instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 45.987, 5.6945, 21.3333 )
+
+[node name="tường13" parent="lớp học/tường nhà/tường dọc" instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.57338, 5.6945, -0.384647 )
+
+[node name="tường14" parent="lớp học/tường nhà/tường dọc" instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.57338, 5.6945, 6.86337 )
+
+[node name="tường15" parent="lớp học/tường nhà/tường dọc" instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.57338, 5.6945, 14.0687 )
+
+[node name="tường16" parent="lớp học/tường nhà/tường dọc" instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.57338, 5.6945, 21.3333 )
+
+[node name="tường ngang" type="Spatial" parent="lớp học/tường nhà"]
+
+[node name="tường" parent="lớp học/tường nhà/tường ngang" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.52576, 5.6945, -4.55103 )
+
+[node name="tường2" parent="lớp học/tường nhà/tường ngang" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.76239, 5.6945, -4.55103 )
+
+[node name="tường3" parent="lớp học/tường nhà/tường ngang" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.0505, 5.6945, -4.55103 )
+
+[node name="tường4" parent="lớp học/tường nhà/tường ngang" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3387, 5.6945, -4.55103 )
+
+[node name="tường6" parent="lớp học/tường nhà/tường ngang" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28.3067, 5.6945, -4.55103 )
+
+[node name="tường7" parent="lớp học/tường nhà/tường ngang" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 35.5948, 5.6945, -4.55103 )
+
+[node name="tường8" parent="lớp học/tường nhà/tường ngang" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 42.883, 5.6945, -4.55103 )
+
+[node name="tường5" parent="lớp học/tường nhà/tường ngang" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.52576, 5.6945, 24.6705 )
+
+[node name="tường9" parent="lớp học/tường nhà/tường ngang" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.76239, 5.6945, 24.6705 )
+
+[node name="tường10" parent="lớp học/tường nhà/tường ngang" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.0505, 5.6945, 24.6705 )
+
+[node name="tường11" parent="lớp học/tường nhà/tường ngang" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3387, 5.6945, 24.6705 )
+
+[node name="tường12" parent="lớp học/tường nhà/tường ngang" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28.3067, 5.6945, 24.6705 )
+
+[node name="tường13" parent="lớp học/tường nhà/tường ngang" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 35.5948, 5.6945, 24.6705 )
+
+[node name="tường14" parent="lớp học/tường nhà/tường ngang" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 42.883, 5.6945, 24.6705 )
+
+[editable path="player"]
