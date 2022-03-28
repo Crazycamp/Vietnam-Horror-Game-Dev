@@ -37,7 +37,7 @@ anchor_bottom = 0.0
 margin_right = 141.0
 margin_bottom = 27.0
 align = 0
-next_scene_path = "School.tscn"
+next_scene_path = "res://Main Game/levels/School.tscn"
 
 [node name="Settings" type="Button" parent="VBoxContainer"]
 margin_top = 31.0
