@@ -22,8 +22,6 @@ texture = ExtResource( 4 )
 
 [node name="Học sinh" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.57263, 0 )
-speed = null
-gravity = null
 
 [node name="Floor" type="StaticBody" parent="."]
 transform = Transform( 9.73831, 0, 0, 0, 1, 0, 0, 0, 15.1891, 0, -1.04846, 0 )

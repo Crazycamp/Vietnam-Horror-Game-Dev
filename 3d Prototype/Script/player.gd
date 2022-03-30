@@ -4,6 +4,16 @@ onready var sprint_timer = $SprintTimer
 var sprinting = false
 var a = 0
 var current_animation = "idle"
+var gravity_vec = Vector3()
+var health = 100
+
+enum GROUND_STATE {
+	GROUNDED,
+	MIDAIR,
+	CONTACT
+}
+
+var player_state = GROUND_STATE.GROUNDED
 
 func playerSetup (pos : Vector3):
 	global_transform.origin = pos
@@ -15,6 +25,22 @@ func _physics_process(delta) -> void:
 		Input.get_action_strength("move_right") - Input.get_action_strength("move_left"),
 		Input.get_action_strength("move_backwards") - Input.get_action_strength("move_towards")).normalized()
 		
+	match player_state: 
+		GROUND_STATE.GROUNDED:
+			gravity_vec = Vector3.ZERO
+			if not is_on_floor():
+				player_state = GROUND_STATE.MIDAIR
+		GROUND_STATE.MIDAIR:
+			gravity_vec += Vector3.DOWN * gravity * delta
+			if is_on_floor():
+				player_state = GROUND_STATE.CONTACT
+		GROUND_STATE.CONTACT:
+			if gravity_vec.length() >= 10:
+				health -= 10
+				print (health)
+			player_state = GROUND_STATE.GROUNDED
+			
+	
 	if Input.is_action_pressed("move_right"):
 		current_animation = "idle"
 	if Input.is_action_pressed("move_left"):
