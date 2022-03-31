@@ -1,29 +1,12 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Main Game/levelblocks/sàn gạch.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/horror enviroment.tres" type="Environment" id=2]
-[ext_resource path="res://Main Game/levelblocks/tường học.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Main Game/levelblocks/cửa ra vào.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Main Game/levelblocks/cửa sổ.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Main Game/playerrelated/player.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Main Game/levelblocks/Stairway/block1.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/Old levels/levelblocks/Stairway/block1.tscn" type="PackedScene" id=7]
 
 [sub_resource type="BoxShape" id=1]
 
 [sub_resource type="CubeMesh" id=2]
-
-[sub_resource type="SpatialMaterial" id=3]
-flags_unshaded = true
-vertex_color_use_as_albedo = true
-params_blend_mode = 1
-params_billboard_mode = 3
-particles_anim_h_frames = 1
-particles_anim_v_frames = 1
-particles_anim_loop = false
-
-[sub_resource type="ParticlesMaterial" id=4]
-
-[sub_resource type="PlaneMesh" id=5]
 
 [node name="Spatial" type="Spatial"]
 
@@ -47,180 +30,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, -5.68434e-14, 0, 1, 0, 0, 0 )
 mesh = SubResource( 2 )
 material/0 = null
 
-[node name="sàn trường học" type="Spatial" parent="."]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 51.3447, 0.195585, -0.238441 )
-
-[node name="sàn gạch" parent="sàn trường học" instance=ExtResource( 1 )]
-
-[node name="sàn gạch2" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.364, 0, 0 )
-
-[node name="sàn gạch3" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10.08 )
-
-[node name="sàn gạch4" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.364, 0, -10.08 )
-
-[node name="sàn gạch5" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20.1594 )
-
-[node name="sàn gạch6" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.364, 0, -20.1594 )
-
-[node name="sàn gạch7" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -30.1856 )
-
-[node name="sàn gạch8" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.364, 0, -30.1856 )
-
-[node name="sàn gạch9" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -40.2656 )
-
-[node name="sàn gạch10" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.364, 0, -40.2656 )
-
-[node name="sàn gạch11" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -50.3449 )
-
-[node name="sàn gạch12" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.364, 0, -50.3449 )
-
-[node name="sàn gạch13" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -60.4733 )
-
-[node name="sàn gạch14" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.364, 0, -60.4733 )
-
-[node name="sàn gạch15" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -70.5533 )
-
-[node name="sàn gạch16" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.364, 0, -70.5533 )
-
-[node name="sàn gạch17" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -80.6327 )
-
-[node name="sàn gạch18" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.364, 0, -80.6327 )
-
-[node name="sàn gạch19" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -90.6589 )
-
-[node name="sàn gạch20" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.364, 0, -90.6589 )
-
-[node name="sàn gạch21" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -100.739 )
-
-[node name="sàn gạch22" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.364, 0, -100.739 )
-
-[node name="sàn gạch23" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -110.818 )
-
-[node name="sàn gạch24" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.364, 0, -110.818 )
-
-[node name="sàn gạch25" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.2461, -7.62939e-06, 0.93346 )
-
-[node name="sàn gạch26" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.2461, -7.62939e-06, -9.43053 )
-
-[node name="sàn gạch27" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.166111, -7.62939e-06, 0.933464 )
-
-[node name="sàn gạch28" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.166111, -7.62939e-06, -9.43053 )
-
-[node name="sàn gạch29" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.91326, -7.62939e-06, 0.933468 )
-
-[node name="sàn gạch30" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.91327, -7.62939e-06, -9.43052 )
-
-[node name="sàn gạch31" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19.9395, -7.62939e-06, 0.933468 )
-
-[node name="sàn gạch32" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19.9395, -7.62939e-06, -9.43052 )
-
-[node name="sàn gạch33" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -30.0195, -7.62939e-06, 0.933468 )
-
-[node name="sàn gạch34" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -30.0195, -7.62939e-06, -9.43052 )
-
-[node name="sàn gạch35" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -40.0988, -7.62939e-06, 0.933468 )
-
-[node name="sàn gạch36" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -40.0988, -7.62939e-06, -9.43052 )
-
-[node name="sàn gạch37" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -50.2272, -7.62939e-06, 0.933464 )
-
-[node name="sàn gạch38" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -50.2272, -7.62939e-06, -9.43053 )
-
-[node name="sàn gạch39" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -60.3072, -7.62939e-06, 0.933464 )
-
-[node name="sàn gạch40" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -60.3072, -7.62939e-06, -9.43053 )
-
-[node name="sàn gạch41" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -70.3866, -7.62939e-06, 0.933464 )
-
-[node name="sàn gạch42" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -70.3866, -7.62939e-06, -9.43053 )
-
-[node name="sàn gạch43" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -80.4128, -7.62939e-06, 0.933468 )
-
-[node name="sàn gạch44" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -80.4128, -7.62939e-06, -9.43052 )
-
-[node name="sàn gạch45" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -90.4928, -7.62939e-06, 0.933468 )
-
-[node name="sàn gạch46" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -90.4928, -7.62939e-06, -9.43053 )
-
-[node name="sàn gạch47" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -100.572, -7.62939e-06, 0.933472 )
-
-[node name="sàn gạch48" parent="sàn trường học" instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -100.572, -7.62939e-06, -9.43052 )
-
-[node name="cửa sổ" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40.4295, 5.69776, -17.2497 )
-
-[node name="tường học" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -53.7044, 5.56989, -17.1173 )
-
-[node name="Cửa lớp học" parent="." instance=ExtResource( 4 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -47.1427, 4.93981, -17.1374 )
-
-[node name="tường học2" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.0886, 5.67449, -17.2544 )
-
-[node name="tường học3" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.83589, 5.67449, -17.2544 )
-
-[node name="Cửa lớp học2" parent="." instance=ExtResource( 4 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -8.52684, 5.04441, -17.2745 )
-
 [node name="Học sinh" parent="." instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.01864, 0 )
-
-[node name="Spatial" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 5, 0 )
-
-[node name="Particles" type="Particles" parent="Spatial"]
-material_override = SubResource( 3 )
-process_material = SubResource( 4 )
-draw_pass_1 = SubResource( 5 )
 
 [node name="Stair" parent="." instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.2141, 0.180089, 8.19909 )
