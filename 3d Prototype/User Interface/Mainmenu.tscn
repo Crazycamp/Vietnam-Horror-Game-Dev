@@ -37,7 +37,11 @@ anchor_bottom = 0.0
 margin_right = 141.0
 margin_bottom = 27.0
 align = 0
+<<<<<<< Updated upstream
 next_scene_path = "res://Main Game/levels/School.tscn"
+=======
+next_scene_path = "res://Main Game/levels/Home.tscn"
+>>>>>>> Stashed changes
 
 [node name="Settings" type="Button" parent="VBoxContainer"]
 margin_top = 31.0

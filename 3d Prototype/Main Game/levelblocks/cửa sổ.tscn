@@ -24,12 +24,13 @@ skeleton = NodePath("../..")
 material/0 = ExtResource( 1 )
 
 [node name="StaticBody2" type="StaticBody" parent="."]
-transform = Transform( 3.638, 0, 0, 0, 5.514, 0, 0, 0, 0.5, 18.0069, 0, 0 )
+transform = Transform( 3.638, 0, 0, 0, 5.514, 0, 0, 0, 0.5, 15.6928, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody2"]
 shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="StaticBody2/CollisionShape"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 mesh = SubResource( 2 )
 skeleton = NodePath("../..")
 material/0 = ExtResource( 1 )
