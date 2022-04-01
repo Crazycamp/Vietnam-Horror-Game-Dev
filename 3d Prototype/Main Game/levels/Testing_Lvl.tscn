@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Main Game/playerrelated/player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://assets/Assets Library.tres" type="MeshLibrary" id=2]
 
 [sub_resource type="PhysicsMaterial" id=1]
 
@@ -16,15 +15,6 @@
 [node name="Học sinh" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0639283, 38.9855, -3.42695 )
 collision_layer = 2
-
-[node name="v" type="GridMap" parent="."]
-mesh_library = ExtResource( 2 )
-data = {
-"cells": PoolIntArray(  )
-}
-__meta__ = {
-"_editor_clip_": 0
-}
 
 [node name="StaticBody4" type="StaticBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 21.5373, -0.219006 )
