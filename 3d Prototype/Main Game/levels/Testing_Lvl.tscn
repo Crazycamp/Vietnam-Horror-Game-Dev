@@ -15,7 +15,7 @@
 [node name="Spatial" type="Spatial"]
 
 [node name="Học sinh" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 51.197, 7.43921, 17.1717 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.8487, 73.2855, -3.30792 )
 collision_layer = 2
 sprint_speed = 13.0
 
@@ -33,6 +33,18 @@ material/0 = null
 [node name="CollisionShape" type="CollisionShape" parent="test 1/StaticBody4"]
 shape = SubResource( 3 )
 
+[node name="StaticBody6" type="StaticBody" parent="test 1"]
+transform = Transform( 13.9375, 0, 0, 0, 1, 0, 0, 0, 13.9375, -30.054, 48.0242, -3.48537 )
+collision_mask = 2
+physics_material_override = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="test 1/StaticBody6"]
+mesh = SubResource( 5 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="test 1/StaticBody6"]
+shape = SubResource( 3 )
+
 [node name="StaticBody2" type="StaticBody" parent="test 1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 4.54352, 0, 0, 5.99158 )
 collision_mask = 2
@@ -47,6 +59,20 @@ material/0 = null
 transform = Transform( 7.30795, 0, 0, 0, 1, 0, 0, 0, 3.04934, 0, 0, 0 )
 shape = SubResource( 3 )
 
+[node name="StaticBody5" type="StaticBody" parent="test 1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 4.54352, -29.3961, 0, 5.99158 )
+collision_mask = 2
+physics_material_override = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="test 1/StaticBody5"]
+transform = Transform( 7.34598, 0, 0, 0, 1, 0, 0, 0, 3.0494, 0, 0, 0 )
+mesh = SubResource( 4 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="test 1/StaticBody5"]
+transform = Transform( 7.30795, 0, 0, 0, 1, 0, 0, 0, 3.04934, 0, 0, 0 )
+shape = SubResource( 3 )
+
 [node name="StaticBody3" type="StaticBody" parent="test 1"]
 transform = Transform( 1, 0, 0, 0, 19.5134, 0, 0, 0, 0.109547, 0, 14.8576, -3.40142 )
 collision_mask = 2
@@ -54,6 +80,11 @@ physics_material_override = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="test 1/StaticBody3"]
 transform = Transform( 7.34598, 0, 0, 0, 1, 0, 0, 0, 3.0494, 0, 0, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="MeshInstance2" type="MeshInstance" parent="test 1/StaticBody3"]
+transform = Transform( 7.34598, 0, 0, 0, 1.73381, 0, 0, 0, 3.0494, -29.187, 1.00634, -0.0538712 )
 mesh = SubResource( 2 )
 material/0 = null
 
@@ -110,7 +141,7 @@ collision_mask = 2
 physics_material_override = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="test 2/StaticBody7"]
-transform = Transform( 7.34598, 0, 0, 0, 1, 0, 0, 0, 3.0494, 0, 0, 0 )
+transform = Transform( 7.34598, 0, 0, 0, 1, 1.77636e-15, 0, 2.84217e-14, 3.0494, 0, 0, 0 )
 mesh = SubResource( 4 )
 material/0 = null
 

@@ -36,7 +36,7 @@ func _physics_process(delta) -> void:
 				player_state = GROUND_STATE.CONTACT
 		GROUND_STATE.CONTACT:
 			if gravity_vec.length() >= 10:
-				health -= 10
+				health -= health -10
 				print (health)
 			player_state = GROUND_STATE.GROUNDED
 			
