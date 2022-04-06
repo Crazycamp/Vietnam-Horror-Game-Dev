@@ -15,9 +15,12 @@
 [node name="Spatial" type="Spatial"]
 
 [node name="Học sinh" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.8487, 73.2855, -3.30792 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.1744, 73.564, -3.30792 )
 collision_layer = 2
-sprint_speed = 13.0
+
+[node name="Camera" parent="Học sinh/SpringArm" index="0"]
+transform = Transform( 1, 0, 0, 0, 0.957274, 0.289182, 0, -0.289182, 0.957274, 0, 5.44332, 6.76322 )
+fov = 100.7
 
 [node name="test 1" type="Spatial" parent="."]
 
@@ -141,7 +144,7 @@ collision_mask = 2
 physics_material_override = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="test 2/StaticBody7"]
-transform = Transform( 7.34598, 0, 0, 0, 1, 1.77636e-15, 0, 2.84217e-14, 3.0494, 0, 0, 0 )
+transform = Transform( 7.34598, 0, 0, 0, 1, 3.55271e-15, 0, 5.68434e-14, 3.0494, 0, 0, 0 )
 mesh = SubResource( 4 )
 material/0 = null
 
@@ -160,10 +163,12 @@ collision_mask = 2
 physics_material_override = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="test 2/StaticBody8"]
-transform = Transform( 7.34598, 0, 0, 0, 1, 0, 0, 0, 3.0494, 0, 0, 0 )
+transform = Transform( 7.34598, 0, 0, 0, 1, 1.77636e-15, 0, 2.84217e-14, 3.0494, 0, 0, 0 )
 mesh = SubResource( 4 )
 material/0 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="test 2/StaticBody8"]
 transform = Transform( 7.30795, 0, 0, 0, 1, 0, 0, 0, 3.04934, 0, 0, 0 )
 shape = SubResource( 3 )
+
+[editable path="Học sinh"]
