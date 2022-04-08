@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/material/Ghế.tres" type="Material" id=1]
+
+[sub_resource type="BoxShape" id=1]
+
+[sub_resource type="CubeMesh" id=2]
+
+[node name="ghế" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 2.3, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="StaticBody" type="RigidBody" parent="."]
+mass = 1.16
+gravity_scale = 32.1
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody"]
+mesh = SubResource( 2 )
+skeleton = NodePath("../..")
+material/0 = ExtResource( 1 )

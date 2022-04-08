@@ -1,0 +1,204 @@
+[gd_scene load_steps=5 format=2]
+
+[sub_resource type="BoxShape" id=3]
+
+[sub_resource type="CubeMesh" id=4]
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 8.15227, 0.454368, 8.53315 )
+
+[sub_resource type="CubeMesh" id=1]
+
+[node name="Stair" type="Spatial"]
+
+[node name="StaticBody2" type="StaticBody" parent="."]
+transform = Transform( 10.7136, 0, 0, 0, 1, 0, 0, 0, 7.89894, -4.11281, 10.1318, -15.2514 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody2"]
+shape = SubResource( 3 )
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody2/CollisionShape"]
+mesh = SubResource( 4 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="."]
+transform = Transform( 0.559601, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, 1.62785, -0.046402, -0.0925884 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.68132, -4.55772 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 8.19545, -1.14436e-11, 2.60512e-15, 2.8602e-11, 0.304982, 0.304823, -2.8589e-11, -0.304823, 0.304982, 0, 2.68702, -6.40889 )
+mesh = SubResource( 1 )
+skeleton = NodePath("")
+material/0 = null
+
+[node name="MeshInstance2" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 8.19545, -1.14436e-11, 2.60512e-15, 2.8602e-11, 0.304982, 0.304823, -2.8589e-11, -0.304823, 0.304982, 0, 2.69122, -7.6064 )
+mesh = SubResource( 1 )
+skeleton = NodePath("")
+material/0 = null
+
+[node name="MeshInstance6" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 8.19545, -1.14436e-11, 2.60512e-15, 2.8602e-11, 0.304982, 0.304823, -2.8589e-11, -0.304823, 0.304982, -0.0368202, 2.67588, -12.4689 )
+mesh = SubResource( 1 )
+skeleton = NodePath("")
+material/0 = null
+
+[node name="MeshInstance5" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 8.19545, -1.14436e-11, 2.60512e-15, 2.8602e-11, 0.304982, 0.304823, -2.8589e-11, -0.304823, 0.304982, -0.0368202, 2.68189, -11.2487 )
+mesh = SubResource( 1 )
+skeleton = NodePath("")
+material/0 = null
+
+[node name="MeshInstance4" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 8.19545, -1.14436e-11, 2.60512e-15, 2.8602e-11, 0.304982, 0.304823, -2.8589e-11, -0.304823, 0.304982, -0.0368202, 2.6777, -10.0512 )
+mesh = SubResource( 1 )
+skeleton = NodePath("")
+material/0 = null
+
+[node name="MeshInstance3" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 8.19545, -1.14436e-11, 2.60512e-15, 2.8602e-11, 0.304982, 0.304823, -2.8589e-11, -0.304823, 0.304982, 0, 2.68521, -8.82656 )
+mesh = SubResource( 1 )
+skeleton = NodePath("")
+material/0 = null
+
+[node name="MeshInstance7" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 8.19545, -1.14436e-11, 2.60512e-15, 2.8602e-11, 0.304982, 0.304823, -2.8589e-11, -0.304823, 0.304982, 0, 2.66342, 0.883577 )
+mesh = SubResource( 1 )
+skeleton = NodePath("")
+material/0 = null
+
+[node name="MeshInstance8" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 8.19545, -1.14436e-11, 2.60512e-15, 2.8602e-11, 0.304982, 0.304823, -2.8589e-11, -0.304823, 0.304982, 0, 2.66762, -0.313931 )
+mesh = SubResource( 1 )
+skeleton = NodePath("")
+material/0 = null
+
+[node name="MeshInstance13" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 8.19545, -1.14436e-11, 2.60512e-15, 2.8602e-11, 0.304982, 0.304823, -2.8589e-11, -0.304823, 0.304982, 0, 2.63795, 3.28732 )
+mesh = SubResource( 1 )
+skeleton = NodePath("")
+material/0 = null
+
+[node name="MeshInstance14" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 8.19545, -1.14436e-11, 2.60512e-15, 2.8602e-11, 0.304982, 0.304823, -2.8589e-11, -0.304823, 0.304982, 0, 2.64215, 2.08981 )
+mesh = SubResource( 1 )
+skeleton = NodePath("")
+material/0 = null
+
+[node name="MeshInstance9" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 8.19545, -1.14436e-11, 2.60512e-15, 2.8602e-11, 0.304982, 0.304823, -2.8589e-11, -0.304823, 0.304982, -0.0368202, 2.65228, -5.17643 )
+mesh = SubResource( 1 )
+skeleton = NodePath("")
+material/0 = null
+
+[node name="MeshInstance10" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 8.19545, -1.14436e-11, 2.60512e-15, 2.8602e-11, 0.304982, 0.304823, -2.8589e-11, -0.304823, 0.304982, -0.0368202, 2.65829, -3.95627 )
+mesh = SubResource( 1 )
+skeleton = NodePath("")
+material/0 = null
+
+[node name="MeshInstance11" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 8.19545, -1.14436e-11, 2.60512e-15, 2.8602e-11, 0.304982, 0.304823, -2.8589e-11, -0.304823, 0.304982, -0.0368202, 2.6541, -2.75877 )
+mesh = SubResource( 1 )
+skeleton = NodePath("")
+material/0 = null
+
+[node name="MeshInstance12" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 8.19545, -1.14436e-11, 2.60512e-15, 2.8602e-11, 0.304982, 0.304823, -2.8589e-11, -0.304823, 0.304982, 0, 2.66161, -1.53409 )
+mesh = SubResource( 1 )
+skeleton = NodePath("")
+material/0 = null
+
+[node name="StaticBody3" type="StaticBody" parent="."]
+transform = Transform( -0.559601, -6.18172e-08, -6.18172e-08, 0, 0.707107, -0.707107, 4.89218e-08, -0.707107, -0.707107, -9.37035, 11.6014, -2.85458 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.68132, -4.55772 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody3"]
+transform = Transform( 8.19545, -1.14436e-11, 2.60512e-15, 2.8602e-11, 0.304982, 0.304823, -2.8589e-11, -0.304823, 0.304982, 0, 2.68702, -6.40889 )
+mesh = SubResource( 1 )
+skeleton = NodePath("")
+material/0 = null
+
+[node name="MeshInstance2" type="MeshInstance" parent="StaticBody3"]
+transform = Transform( 8.19545, -1.14436e-11, 2.60512e-15, 2.8602e-11, 0.304982, 0.304823, -2.8589e-11, -0.304823, 0.304982, 0, 2.69122, -7.6064 )
+mesh = SubResource( 1 )
+skeleton = NodePath("")
+material/0 = null
+
+[node name="MeshInstance6" type="MeshInstance" parent="StaticBody3"]
+transform = Transform( 8.19545, -1.14436e-11, 2.60512e-15, 2.8602e-11, 0.304982, 0.304823, -2.8589e-11, -0.304823, 0.304982, -0.0368202, 2.67588, -12.4689 )
+mesh = SubResource( 1 )
+skeleton = NodePath("")
+material/0 = null
+
+[node name="MeshInstance5" type="MeshInstance" parent="StaticBody3"]
+transform = Transform( 8.19545, -1.14436e-11, 2.60512e-15, 2.8602e-11, 0.304982, 0.304823, -2.8589e-11, -0.304823, 0.304982, -0.0368202, 2.68189, -11.2487 )
+mesh = SubResource( 1 )
+skeleton = NodePath("")
+material/0 = null
+
+[node name="MeshInstance4" type="MeshInstance" parent="StaticBody3"]
+transform = Transform( 8.19545, -1.14436e-11, 2.60512e-15, 2.8602e-11, 0.304982, 0.304823, -2.8589e-11, -0.304823, 0.304982, -0.0368202, 2.6777, -10.0512 )
+mesh = SubResource( 1 )
+skeleton = NodePath("")
+material/0 = null
+
+[node name="MeshInstance3" type="MeshInstance" parent="StaticBody3"]
+transform = Transform( 8.19545, -1.14436e-11, 2.60512e-15, 2.8602e-11, 0.304982, 0.304823, -2.8589e-11, -0.304823, 0.304982, 0, 2.68521, -8.82656 )
+mesh = SubResource( 1 )
+skeleton = NodePath("")
+material/0 = null
+
+[node name="MeshInstance7" type="MeshInstance" parent="StaticBody3"]
+transform = Transform( 8.19545, -1.14436e-11, 2.60512e-15, 2.8602e-11, 0.304982, 0.304823, -2.8589e-11, -0.304823, 0.304982, 0, 2.66342, 0.883577 )
+mesh = SubResource( 1 )
+skeleton = NodePath("")
+material/0 = null
+
+[node name="MeshInstance8" type="MeshInstance" parent="StaticBody3"]
+transform = Transform( 8.19545, -1.14436e-11, 2.60512e-15, 2.8602e-11, 0.304982, 0.304823, -2.8589e-11, -0.304823, 0.304982, 0, 2.66762, -0.313931 )
+mesh = SubResource( 1 )
+skeleton = NodePath("")
+material/0 = null
+
+[node name="MeshInstance13" type="MeshInstance" parent="StaticBody3"]
+transform = Transform( 8.19545, -1.14436e-11, 2.60512e-15, 2.8602e-11, 0.304982, 0.304823, -2.8589e-11, -0.304823, 0.304982, 0, 2.63795, 3.28732 )
+mesh = SubResource( 1 )
+skeleton = NodePath("")
+material/0 = null
+
+[node name="MeshInstance14" type="MeshInstance" parent="StaticBody3"]
+transform = Transform( 8.19545, -1.14436e-11, 2.60512e-15, 2.8602e-11, 0.304982, 0.304823, -2.8589e-11, -0.304823, 0.304982, 0, 2.64215, 2.08981 )
+mesh = SubResource( 1 )
+skeleton = NodePath("")
+material/0 = null
+
+[node name="MeshInstance9" type="MeshInstance" parent="StaticBody3"]
+transform = Transform( 8.19545, -1.14436e-11, 2.60512e-15, 2.8602e-11, 0.304982, 0.304823, -2.8589e-11, -0.304823, 0.304982, -0.0368202, 2.65228, -5.17643 )
+mesh = SubResource( 1 )
+skeleton = NodePath("")
+material/0 = null
+
+[node name="MeshInstance10" type="MeshInstance" parent="StaticBody3"]
+transform = Transform( 8.19545, -1.14436e-11, 2.60512e-15, 2.8602e-11, 0.304982, 0.304823, -2.8589e-11, -0.304823, 0.304982, -0.0368202, 2.65829, -3.95627 )
+mesh = SubResource( 1 )
+skeleton = NodePath("")
+material/0 = null
+
+[node name="MeshInstance11" type="MeshInstance" parent="StaticBody3"]
+transform = Transform( 8.19545, -1.14436e-11, 2.60512e-15, 2.8602e-11, 0.304982, 0.304823, -2.8589e-11, -0.304823, 0.304982, -0.0368202, 2.6541, -2.75877 )
+mesh = SubResource( 1 )
+skeleton = NodePath("")
+material/0 = null
+
+[node name="MeshInstance12" type="MeshInstance" parent="StaticBody3"]
+transform = Transform( 8.19545, -1.14436e-11, 2.60512e-15, 2.8602e-11, 0.304982, 0.304823, -2.8589e-11, -0.304823, 0.304982, 0, 2.66161, -1.53409 )
+mesh = SubResource( 1 )
+skeleton = NodePath("")
+material/0 = null
